@@ -18,10 +18,12 @@
   * Slides: github, slidedown
   * github.com/railsbridge
 
-!SLIDE
+!SLIDE centereverything
 <img src="img/pivotal_labs_logo.png" />&nbsp;&nbsp;
 <img src="img/engineyard_logo.png" />&nbsp;&nbsp;
-<img src="img/railsbridge_logo.png" />&nbsp;&nbsp;
+<img src="img/barbarian_group_logo.jpg" width="400" />&nbsp;&nbsp;
+<img src="img/hashrocket_logo.png" />&nbsp;&nbsp;
+<img src="img/railsbridge_logo.png" height="200" />&nbsp;&nbsp;
 
 !SLIDE
 
