@@ -135,11 +135,10 @@
 ## Schedule
 * 9:30-10:00 Sign in, get coffee
 * 10:00-10:30 Intro
-* 10:30-11:20 Part 1: Ruby bootcamp
-* 11:30-12:20 Part 2: Creating the app
-* 12:30-1:30 Lunch (Mediterranean)
-* 1:30-2:20 Part 3: Associations
-* 2:30-3:20 Part 4: Authentication
+* 10:30-11:20 Session 1
+* 11:30-12:20 Session 2
+* 12:30-1:30 Lunch
+* 1:30-2:20 Session 3
+* 2:30-3:20 Session 4
 * 3:30-4:00 Wrap up & final questions
-* 4:00-4:30 TA meeting & cleanup
-* 4:30-?? Afterparty @ Thirsty Bear
+* 4:00-?? Afterparty @ Harry's Italian (2 Gold St @ Platt)
