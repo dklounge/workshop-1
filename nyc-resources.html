@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>Add topics</title>
+    <title>Slides</title>
     <style type="text/css" media="screen">
       * {
   margin: 0;
@@ -118,33 +118,6 @@ ul {
 .code .vi { color: #008080 } /* Name.Variable.Instance */
 .code .il { color: #009999 } /* Literal.Number.Integer.Long */
     </style>
-    
-      <style type="text/css" media="screen">
-        .centereverything {
-  text-align: center;
-}
-
-.slide-hilite {
-  text-color: red;
-}
-
-.big-text {
-  font-size: 150%;
-}
-
-.table-code {
-  font-family: Bitstream Vera Sans Mono;
-}
-li {
-    padding: 8;
-}
-
-td {
-    font-size: 32px; 
-    padding: 8;
-}
-
-      </style>
     
     <script type="text/javascript">
       /*!
@@ -4821,23 +4794,31 @@ jQuery.extend( jQuery.easing,
   
   var move = function(event) {
     var DIRECTIONS = {
-      1: -1,  // LEFT MOUSE BTN
-      3: 1,   // RIGHT MOUSE BTN
       37: -1, // ARROW LEFT
       39: 1,  // ARROW RIGHT
       32: 1,  // SPACE BAR
-      13: 1   // RETURN
+      13: 1,   // RETURN
+      left: -1,
+      right: 1
     }
     
-    if (dir = DIRECTIONS[event.which]) {
+    if (dir = DIRECTIONS[event.which || event]) {
       setIndex(getIndex() + dir);
+    }
+  }
+  
+  function clickMove(e) {
+    if (e.pageX < ($(window).width() / 2)) {
+      move('left');
+    } else {
+      move('right');
     }
   }
   
   $(window).bind('resize', function() { adjustSlides(); });
   $(document).bind('keydown', move);
-  $(document).bind('click', move);
   $(document).bind('hash.changed', adjustSlides);
+  $(document).bind('click', clickMove);
   $(document).ready(function() {
     setIndex(getIndex() || 0);
     $(this).trigger('hash.changed');
@@ -4846,7 +4827,6 @@ jQuery.extend( jQuery.easing,
     }
   });
 })(jQuery);
-
     </script>
     
   </head>
@@ -4856,122 +4836,7 @@ jQuery.extend( jQuery.easing,
         
           <div class="">
             <div id="slide-0" class="content">
-              <h1>let's add topics</h1><ul>
-<li>what exactly do we mean by "add topics?"</li>
-<li>rails "scaffolding" to generate some pages (and code)</li>
-<li>set up database with a new table (migration)</li>
-<li>review what we did</li>
-</ul>
-            </div>
-          </div>
-        
-          <div class="">
-            <div id="slide-1" class="content">
-              <h1>adding topics</h1><ul>
-<li>topic will have a title and a description</li>
-<li>we will enable basic "CRUD" actions
-
-<ul>
-<li>Create - enter a new topic</li>
-<li>Read - see everyone's topics</li>
-<li>Update - change the topics you entered</li>
-<li>Delete - remove your topics from the system</li>
-</ul>
-</li>
-</ul>
-            </div>
-          </div>
-        
-          <div class="">
-            <div id="slide-2" class="content">
-              <p>.</p><pre><code>ruby script/generate scaffold topic title:string description:text
-rake db:migrate
-</code></pre>
-            </div>
-          </div>
-        
-          <div class="">
-            <div id="slide-3" class="content">
-              <p>.</p><pre><code>http://localhost:3000/topics
-</code></pre>
-            </div>
-          </div>
-        
-          <div class=" ">
-            <div id="slide-4" class="content">
-              <h1>What did we just do?</h1><ul>
-<li>a model
-
-<ul>
-<li>create    app/models/topic.rb</li>
-<li>create    db/migrate/20090611073227_create_topics.rb</li>
-</ul>
-</li>
-<li>4 views
-
-<ul>
-<li>create  app/views/topics/index.html.erb</li>
-<li>create  app/views/topics/show.html.erb</li>
-<li>create  app/views/topics/new.html.erb</li>
-<li>create  app/views/topics/edit.html.erb</li>
-</ul>
-</li>
-<li>a controller
-
-<ul>
-<li>create  app/controllers/topics_controller.rb</li>
-<li>route  map.resources :topics</li>
-</ul>
-</li>
-</ul>
-            </div>
-          </div>
-        
-          <div class="">
-            <div id="slide-5" class="content">
-              <p><img src="http://www.gliffy.com/pubdoc/1734447/L.jpg" alt="Architecture"></p>
-            </div>
-          </div>
-        
-          <div class="">
-            <div id="slide-6" class="content">
-              <h1>Model-View-Controller</h1><ul>
-<li>
-<strong>Model</strong>
-
-<ul>
-<li>represents what is in the database</li>
-<li>ActiveRecord</li>
-</ul>
-</li>
-<li>
-<strong>View</strong>
-
-<ul>
-<li>the model rendered as HTML</li>
-<li>ActionView, erb</li>
-</ul>
-</li>
-<li>
-<strong>Controller</strong>
-
-<ul>
-<li>receives HTTP actions (GET, POST, PUT, DELETE)</li>
-<li>decides what to do, typically rendering a view</li>
-<li>ActionController</li>
-</ul>
-</li>
-</ul>
-            </div>
-          </div>
-        
-          <div class=" code">
-            <div id="slide-7" class="content">
-              <p>.</p><pre><code>git add -A
-git commit -m 'topic crud'
-git push heroku master
-heroku rake db:migrate
-</code></pre>
+              <h2>Additional Resources</h2><p><strong>github.com</strong> for source code sharing and browsing</p><p><strong>heroku.com</strong> for easy site hosting</p><p><strong>gemcutter.org</strong> for all your gem needs</p><p><strong>#nycrb</strong> on IRC for realtime interaction with NYC ruby developers</p><p><strong>nycruby.org</strong> and <strong>meetup.com/nycruby</strong> for information about NYC ruby meetups and mailing lists</p><p><strong>nyc-ruby-women@googlegroups.com</strong> for continuing the experience after the workshop is over</p>
             </div>
           </div>
         

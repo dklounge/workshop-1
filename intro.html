@@ -12,6 +12,7 @@ body {
   font-size: 38px;
   color: #111;
   background: #fff;
+  overflow: hidden;
 }
 
 pre {
@@ -28,6 +29,17 @@ blockquote {
 
 ul {
   padding: 0 0 0 1em;
+}
+
+#instructions {
+  position: absolute;
+  width: 99%;
+  text-align: center;
+  background: #ffd;
+  font-size: 20px;
+  padding: 10px;
+  font-weight: bold;
+  border-bottom: 1px solid #ff0;
 }
 
 #slides {
@@ -117,34 +129,8 @@ ul {
 .code .vg { color: #008080 } /* Name.Variable.Global */
 .code .vi { color: #008080 } /* Name.Variable.Instance */
 .code .il { color: #009999 } /* Literal.Number.Integer.Long */
+
     </style>
-    
-      <style type="text/css" media="screen">
-        .centereverything {
-  text-align: center;
-}
-
-.slide-hilite {
-  text-color: red;
-}
-
-.big-text {
-  font-size: 150%;
-}
-
-.table-code {
-  font-family: Bitstream Vera Sans Mono;
-}
-li {
-    padding: 8;
-}
-
-td {
-    font-size: 32px; 
-    padding: 8;
-}
-
-      </style>
     
     <script type="text/javascript">
       /*!
@@ -4756,43 +4742,43 @@ jQuery.extend( jQuery.easing,
   var allSlides = function() {
     return $('#slides #track > div');
   }
-  
+
   var slideDimensions = function() {
     return {
       width: $(window).width(),
       height: $(window).height()
     }
   }
-  
+
   var getIndex = function() {
     var index = document.location.hash.split('#')[1];
     return Number(index);
   }
-  
+
   var setIndex = function(idx) {
     var newSlide = '#slide-' + idx;
     if ($(newSlide).size() < 1) { return false; }
     document.location.hash = '#' + idx;
   }
-  
+
   var setSlideDimensions = function() {
     var dimensions = slideDimensions();
-    
+
     $('#slides').height(dimensions.height);
     $('#slides').width(dimensions.width);
-    
+
     allSlides().height(dimensions.height);
     allSlides().width(dimensions.width);
   }
-  
+
   var showCurrentSlide = function() {
     var dimensions = slideDimensions();
     var index = getIndex();
     var offset = (index || 0) * dimensions.width;
-    
+
     $('#track').animate({ marginLeft: '-' + offset + 'px' }, 200);
   }
-  
+
   var verticalAlign = function() {
     var dimensions = slideDimensions();
     var margin = (dimensions.height - $(this).height()) / 2;
@@ -4806,44 +4792,66 @@ jQuery.extend( jQuery.easing,
       overflow: 'hidden',
       fontSize: '26px'
     });
-    
+
     allSlides().find('.content').each(verticalAlign);
   }
-  
+
   var adjustSlides = function() {
     var dimensions = slideDimensions();
-    
+
     setSlideDimensions();
     showCurrentSlide();
 
     formatGist();
   }
-  
+
   var move = function(event) {
     var DIRECTIONS = {
-      1: -1,  // LEFT MOUSE BTN
-      3: 1,   // RIGHT MOUSE BTN
-      37: -1, // ARROW LEFT
-      39: 1,  // ARROW RIGHT
-      32: 1,  // SPACE BAR
-      13: 1   // RETURN
+      37: -1,     // ARROW LEFT
+      39: 1,      // ARROW RIGHT
+      32: 1,      // SPACE BAR
+      13: 1,      // RETURN
+      27: 'home', // ESCAPE
+      left: -1,
+      right: 1
     }
-    
-    if (dir = DIRECTIONS[event.which]) {
-      setIndex(getIndex() + dir);
+
+    if (dir = DIRECTIONS[event.which || event]) {
+      if (dir == 'home') {
+        event.preventDefault();
+        event.stopPropagation();
+        location.href = '/';
+      } else {
+        $('#instructions').slideUp(100);
+        setIndex(getIndex() + dir);
+      }
     }
   }
-  
+
+  function clickMove(e) {
+    if (e.pageX < ($(window).width() / 2)) {
+      move('left');
+    } else {
+      move('right');
+    }
+  }
+
+  function hideInstructions() {
+    $('#instructions').slideUp(200);
+  }
+
   $(window).bind('resize', function() { adjustSlides(); });
   $(document).bind('keydown', move);
-  $(document).bind('click', move);
   $(document).bind('hash.changed', adjustSlides);
+  $(document).bind('click', clickMove);
   $(document).ready(function() {
     setIndex(getIndex() || 0);
     $(this).trigger('hash.changed');
     if (document.location.search.indexOf('notes') == 1) {
       $('.notes').show();
     }
+
+    window.setTimeout(hideInstructions, 3000);
   });
 })(jQuery);
 
@@ -4851,18 +4859,21 @@ jQuery.extend( jQuery.easing,
     
   </head>
   <body>
+    <div id="instructions">
+      Use the left/right arrow keys to navigate.
+    </div>
     <div id="slides">
       <div id="track">
         
           <div class=" centereverything">
             <div id="slide-0" class="content">
-              <p><img src="img/railsbridge_logo.png"></p><h2>Berkman Center for Internet &amp; Society</h2><h1>Ruby on Rails Workshop</h1><h3>October 17th, 2009</h3><h5>hashtag: #rorw4w</h5><h5>irc: #boston.rb</h5>
+              <p><link rel="StyleSheet" href="styles.css" type="text/css"><img src="img/railsbridge_logo.png"></p><h1>Ruby on Rails Workshop</h1><h3>May 22st &amp; 23rd, 2010</h3><h5>wireless: pivotalguest</h5><h5>hashtag: #rorw4w #railsbridge</h5>
             </div>
           </div>
         
           <div class="">
             <div id="slide-1" class="content">
-              <h1>Open source workshop</h1><ul>
+              <h2>Open source workshop</h2><ul>
 <li>Community project
 
 <ul>
@@ -4876,15 +4887,18 @@ jQuery.extend( jQuery.easing,
 <ul>
 <li>Workshop planning: DevChix wiki</li>
 <li>Slides: github, slidedown</li>
+<li>github.com/railsbridge</li>
 </ul>
 </li>
 </ul>
             </div>
           </div>
         
-          <div class="">
+          <div class=" centereverything">
             <div id="slide-2" class="content">
-              <p><img src="http://www.hashrocket.com/images/logo.png?1254933458"></p><p><img src="http://i.zdnet.com/blogs/engine-yard-logo.png">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  <img src="http://fi.github.com/images/modules/demo/github_logo.png"></p><p><img src="http://railsbridge.org/images/logo.png"></p>
+              <p><img src="img/scribd_logo.jpg">&nbsp;&nbsp;<br><img src="img/heroku_logo.png">&nbsp;&nbsp;
+<img src="img/honk_logo.jpg">&nbsp;&nbsp;<br><img src="img/pivotal_labs_logo.png">&nbsp;&nbsp;
+<img src="img/railsbridge_logo.png" height="200">&nbsp;&nbsp;</p>
             </div>
           </div>
         
@@ -4978,7 +4992,7 @@ jQuery.extend( jQuery.easing,
         
           <div class="">
             <div id="slide-10" class="content">
-              <h1>The Rails Philosophy</h1><ul>
+              <h2>The Rails Philosophy</h2><ul>
 <li>Opinionated</li>
 <li>Convention over configuration</li>
 <li>DRY (Don't Repeat Yourself)
@@ -4995,7 +5009,13 @@ jQuery.extend( jQuery.easing,
         
           <div class="">
             <div id="slide-11" class="content">
-              <h1>Agile development</h1><p><img src="http://img.skitch.com/20090801-jafkfs4eeawy19k9f3mjknb4ht.jpg"></p><ul>
+              <p><img src="img/mvc_simple.png"></p>
+            </div>
+          </div>
+        
+          <div class="">
+            <div id="slide-12" class="content">
+              <h2>Agile development</h2><p><img src="img/agile.jpg"></p><ul>
 <li>Pair programming</li>
 <li>Test-driven or Behavior-driven development</li>
 </ul>
@@ -5003,47 +5023,59 @@ jQuery.extend( jQuery.easing,
           </div>
         
           <div class="">
-            <div id="slide-12" class="content">
-              <h1>Goal</h1><ul>
+            <div id="slide-13" class="content">
+              <h2>Goal</h2><ul>
 <li>By the end of the day, you will have built and deployed a web application live on the internet</li>
 </ul>
             </div>
           </div>
         
           <div class="">
-            <div id="slide-13" class="content">
-              <h1>Tools we'll be working with</h1><ul>
+            <div id="slide-14" class="content">
+              <h2>Tools we'll be working with</h2><ul>
 <li><strong>rails</strong></li>
 <li>
-<strong>rake</strong>: like make for ruby, easy way to run tasks</li>
+<strong>rake</strong>: like make for Ruby. An easy way to run tasks.</li>
 <li>
-<strong>git</strong>: for source code control</li>
+<strong>git</strong>: source code control.</li>
 <li>
-<strong>database</strong>: we'll use sqlite, but could be any relational database</li>
-<li><strong>editor</strong></li>
+<strong>database</strong>: we'll use SQLite, but could be any relational database.</li>
 <li>
-<strong>heroku</strong>: free rails hosting</li>
+<strong>editor</strong>: KomodoEdit.</li>
+<li>
+<strong>heroku</strong>: free Rails hosting.</li>
 </ul>
             </div>
           </div>
         
           <div class="">
-            <div id="slide-14" class="content">
-              <h1>Today's project</h1><p><a href="http://www.ultrasaurus.com/rubyworkshop/app_design/"><img src="http://www.ultrasaurus.com/rubyworkshop/app_design/unauthenticated_home-0.jpg" width="946" height="420"></a></p>
+            <div id="slide-15" class="content">
+              <h2>Materials</h2><ul>
+<li>http://www.scribd.com/openworkshops</li>
+<li>http://wiki.devchix.com/index.php?title=Rails_Curriculum</li>
+</ul>
+            </div>
+          </div>
+        
+          <div class="">
+            <div id="slide-16" class="content">
+              <h2>Today's project</h2><p><a href="http://www.ultrasaurus.com/rubyworkshop/app_design/"><img src="img/unauthenticated_home-0.jpg" width="946" height="420"></a></p>
             </div>
           </div>
         
           <div class=" ">
-            <div id="slide-15" class="content">
-              <h1>Schedule</h1><ul>
-<li>9:30 sign in, coffee &amp; tea</li>
-<li>10:00-10:30 introduction</li>
-<li>10:30 - 11:10 session 1</li>
-<li>11:20 - noon session 2</li>
-<li>12:10-1:00 session 3</li>
-<li>1:00 - 2:00 lunch</li>
-<li>2:00 - 3:15 session 4</li>
-<li>3:30 - 4:00 wrap up; final questions</li>
+            <div id="slide-17" class="content">
+              <h2>Schedule</h2><ul>
+<li>9:30-10:00 Sign in, get coffee</li>
+<li>10:00-10:30 Intro</li>
+<li>10:30-11:20 Session 1</li>
+<li>11:30-12:20 Session 2</li>
+<li>12:30-1:30 Lunch</li>
+<li>1:30-2:45 Session 3</li>
+<li>3:00-4:00 Session 4</li>
+<li>4:00-4:30 Wrap up &amp; final questions</li>
+<li>5:00-?? Afterparty @ Jillian's<br>
+(101 4th St between Mission &amp; Howard)</li>
 </ul>
             </div>
           </div>

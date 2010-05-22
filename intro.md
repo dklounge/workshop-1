@@ -1,15 +1,14 @@
 !SLIDE centereverything
-
+<LINK REL=StyleSheet HREF="styles.css" TYPE="text/css">
 <img src="img/railsbridge_logo.png">
-## Berkman Center for Internet & Society 
 # Ruby on Rails Workshop
-### October 17th, 2009
-#####hashtag: #rorw4w
-#####irc: #boston.rb
+### May 22st & 23rd, 2010
+#####wireless: pivotalguest
+#####hashtag: #rorw4w #railsbridge
 
 !SLIDE
 
-# Open source workshop
+## Open source workshop
 * Community project
   * Many individuals 
   * RailsBridge
@@ -17,13 +16,14 @@
 * Open materials
   * Workshop planning: DevChix wiki
   * Slides: github, slidedown
+  * github.com/railsbridge
 
-!SLIDE
-<img src="http://www.hashrocket.com/images/logo.png?1254933458" />
- 
-<img src="http://i.zdnet.com/blogs/engine-yard-logo.png" />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  <img src="http://fi.github.com/images/modules/demo/github_logo.png" />
- 
-<img src="http://railsbridge.org/images/logo.png" />
+!SLIDE centereverything
+<img src="img/scribd_logo.jpg" />&nbsp;&nbsp;<br/>
+<img src="img/heroku_logo.png" />&nbsp;&nbsp;
+<img src="img/honk_logo.jpg" />&nbsp;&nbsp;<br/>
+<img src="img/pivotal_labs_logo.png" />&nbsp;&nbsp;
+<img src="img/railsbridge_logo.png" height="200" />&nbsp;&nbsp;
 
 !SLIDE
 
@@ -96,7 +96,7 @@
   * 2007 - shipped with Mac OS 10.5 "Leopard"
 
 !SLIDE
-# The Rails Philosophy
+## The Rails Philosophy
 * Opinionated
 * Convention over configuration
 * DRY (Don't Repeat Yourself)
@@ -105,38 +105,48 @@
 * Minimal code - maximal effect
 
 !SLIDE
-# Agile development
+<img src="img/mvc_simple.png">
 
-<img src="http://img.skitch.com/20090801-jafkfs4eeawy19k9f3mjknb4ht.jpg"/>
+!SLIDE
+## Agile development
+
+<img src="img/agile.jpg"/>
 
 * Pair programming
 * Test-driven or Behavior-driven development
 
 
 !SLIDE
-# Goal
+## Goal
 * By the end of the day, you will have built and deployed a web application live on the internet
 
 !SLIDE
-# Tools we'll be working with
+## Tools we'll be working with
 * **rails**
-* **rake**: like make for ruby, easy way to run tasks
-* **git**: for source code control
-* **database**: we'll use sqlite, but could be any relational database 
-* **editor**
-* **heroku**: free rails hosting
+* **rake**: like make for Ruby. An easy way to run tasks.
+* **git**: source code control.
+* **database**: we'll use SQLite, but could be any relational database.
+* **editor**: KomodoEdit.
+* **heroku**: free Rails hosting.
 
 !SLIDE
-# Today's project
-<a href="http://www.ultrasaurus.com/rubyworkshop/app_design/"><img src="http://www.ultrasaurus.com/rubyworkshop/app_design/unauthenticated_home-0.jpg" width="946" height="420"/></a>
+## Materials
+* http://www.scribd.com/openworkshops
+* http://wiki.devchix.com/index.php?title=Rails_Curriculum
+
+!SLIDE
+## Today's project
+<a href="http://www.ultrasaurus.com/rubyworkshop/app_design/"><img src="img/unauthenticated_home-0.jpg" width="946" height="420"/></a>
 
 !SLIDE 
-# Schedule
-* 9:30 sign in, coffee & tea
-* 10:00-10:30 introduction
-* 10:30 - 11:10 session 1
-* 11:20 - noon session 2
-* 12:10-1:00 session 3
-* 1:00 - 2:00 lunch
-* 2:00 - 3:15 session 4
-* 3:30 - 4:00 wrap up; final questions
+## Schedule
+* 9:30-10:00 Sign in, get coffee
+* 10:00-10:30 Intro
+* 10:30-11:20 Session 1
+* 11:30-12:20 Session 2
+* 12:30-1:30 Lunch
+* 1:30-2:45 Session 3
+* 3:00-4:00 Session 4
+* 4:00-4:30 Wrap up & final questions
+* 5:00-?? Afterparty @ Jillian's<br/>
+  (101 4th St between Mission & Howard) 
