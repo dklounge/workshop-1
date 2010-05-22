@@ -2,7 +2,7 @@
 <LINK REL=StyleSheet HREF="styles.css" TYPE="text/css">
 <img src="img/railsbridge_logo.png">
 # Ruby on Rails Workshop
-### May 22st & 23rd, 2010
+### May 21st & 22rd, 2010
 #####wireless: pivotalguest
 #####hashtag: #rorw4w #railsbridge
 
