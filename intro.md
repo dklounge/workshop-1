@@ -131,6 +131,7 @@
 
 !SLIDE
 ## Materials
+* slides: http://railsbridge.github.com/workshop
 * http://www.scribd.com/openworkshops
 * http://wiki.devchix.com/index.php?title=Rails_Curriculum
 
