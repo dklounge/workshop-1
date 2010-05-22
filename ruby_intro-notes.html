@@ -1,0 +1,291 @@
+<p><img src="img/ruby-logo.jpg" width="250"></p>
+
+<table width="100%">
+<tr>
+<td align="center">
+<img src="img/ruby-logo.jpg" width="250">
+</td>
+<td align="center">
+<img src="img/rails_logo.jpg">
+</td>
+</tr>
+<tr>
+<td align="center">
+<span class="big-text">Language</span>
+</td>
+<td align="center">
+<span class="big-text">Framework</span>
+</td>
+</tr>
+</table>
+
+<h1>&nbsp;</h1>
+
+<h1>&nbsp;</h1>
+
+<h2>Matz (Yukihiro Matsumoto)</h2>
+
+<h4>People want to express themselves when they program.</h4>
+
+<h4>&nbsp;</h4>
+
+<h4>They don't want to fight with the language.</h4>
+
+<h4>&nbsp;</h4>
+
+<h4>Programming languages must feel natural to programmers.</h4>
+
+<h4>&nbsp;</h4>
+
+<h4>I tried to make people enjoy programming and concentrate on the fun and creative part of programming when they use Ruby.</h4>
+
+<h3>Ruby 1.0 released in 1996</h3>
+
+<h3>open source</h3>
+
+<h2>Ruby Language Overview</h2>
+
+<ul>
+<li>Dynamically typed</li>
+<li>Interpreted</li>
+<li>Can be modified at runtime</li>
+<li>Object oriented</li>
+<li>Blocks &amp; lambdas</li>
+<li>Perl-like Regular Expressions</li>
+</ul>
+
+<p>Let's get started</p>
+
+<p>IRB: Interactive RuBy</p>
+
+<pre><code>&gt;&gt; 4
+&gt;&gt; 4 + 4
+</code></pre>
+
+<p>Everything is an object</p>
+
+<pre><code>“test”.upcase
+“test”.class
+“test”.methods
+</code></pre>
+
+<p>Everything evaluates to something</p>
+
+<pre><code>2 + 2
+(2+2).zero?
+</code></pre>
+
+<p>Methods are messages</p>
+
+<pre><code>thing.do(4)
+thing.do 4
+thing.send "do", 4
+</code></pre>
+
+<p>Operators are Methods</p>
+
+<pre><code>1 + 2
+1.+(2)
+1.send "+", 2
+
+
+# is a comment
+</code></pre>
+
+<h4>Ruby aims to be elegant and readable</h4>
+
+<h4>so punctuation and boilerplate are minimal</h4>
+
+<p>You don't need semicolons</p>
+
+<p>Use parens when you need them</p>
+
+<pre><code>&gt;&gt; "Hello".gsub 'H', 'h' 
+=&gt; "hello"
+
+&gt;&gt; "Hello".gsub("H", "h").reverse 
+=&gt; "olleh"
+</code></pre>
+
+<p>Variables, symbols, constants</p>
+
+<h2>:this<em>is</em>a_symbol</h2>
+
+<p>There is only one representation of a given symbol in memory, so it really
+means "the thing named :this<em>is</em>a_symbol" to the ruby interpreter. 
+In ruby,
+we prefer symbols over hardcoded globals or strings. They're very lightweight.</p>
+
+<p>Collections</p>
+
+<p>Arrays are sized dynamically and can be of mixed types.</p>
+
+<pre><code>a = [1, 2, 3]
+a.push "four" #=&gt; [1, 2, 3, "four"]
+a.pop #=&gt; "four"
+a[0] #=&gt; 1
+</code></pre>
+
+<p>Hashes are like an associative map</p>
+
+<pre><code>states = {"MA" =&gt; "Massachusetts", "CA" =&gt; "California"}
+states["MA"]
+
+
+my_hash = {:a_symbol =&gt; 3, "a string" =&gt; 4}
+my_hash[:a_symbol] 
+=&gt; 3
+</code></pre>
+
+<p>String interpolation</p>
+
+<p>"string #{ruby code} string"</p>
+
+<pre><code>&gt;&gt; a = "world"   
+&gt;&gt; puts "hello #{a}"
+hello world
+&gt;&gt; a = 2
+&gt;&gt; puts "hello #{a}"
+hello 2
+&gt;&gt; a = nil
+&gt;&gt; puts "hello #{a}"
+hello
+</code></pre>
+
+<p>Iteration</p>
+
+<pre><code>my_array = ["cat", "dog", ”world"]
+my_array.each do |item|
+  puts "hello " + item
+end
+
+
+my_hash = { :type =&gt; "cat", 
+            :name =&gt; "Beckett", 
+            :breed =&gt; "alley cat" }
+my_hash.each do |key, value|
+  puts "My " + key.to_s + " is " + value
+end
+</code></pre>
+
+<p>Classes and methods</p>
+
+<pre><code>class Thing
+  def return_something
+    "something"
+  end
+end
+
+
+class Thing
+  def do_something(a,b)
+    a + b 
+  end
+end
+</code></pre>
+
+<p>&nbsp;
+    var 
+    @var
+    @@var
+    $var
+    VAR</p>
+
+<p>&nbsp;
+    var   # could be a local variable
+    @var  # instance variable
+    @@var # class variable
+    $var  # global variable
+    VAR   # constant</p>
+
+<p>Methods can take blocks, which are like anonymous functions.</p>
+
+<pre><code>my_array = ["cat", "dog", ”world"]
+my_array.each do |item|
+  puts "hello " + item
+end
+</code></pre>
+
+<p>def do_something
+      yield
+   end</p>
+
+<pre><code>[1, 2, 3].each do |item|
+   puts "#{item} is #{item.even? ? "even" : "odd"}."
+end
+</code></pre>
+
+<p>Blocks can also return a value. Map translates each item in an array.</p>
+
+<pre><code>&gt;&gt; ["hello", "world"].map{ |string| string.upcase } 
+=&gt; ["HELLO", "WORLD"]
+</code></pre>
+
+<h4>more neat things about ruby</h4>
+
+<h4>duck typing</h4>
+
+<pre><code>def print_even_or_odd(array_like_thing)
+  array_like_thing.each do |item|
+    puts "#{item} is #{item.even? ? "even" : "odd"}."
+  end
+end
+
+
+print_even_or_odd [1, 2, 3]
+print_even_or_odd 1..3
+</code></pre>
+
+<h4>advanced ruby</h4>
+
+<h4>meta-programming</h4>
+
+<h4>creating Domain-Specific Languages (DSLs)</h4>
+
+<h1>Rails</h1>
+
+<h1>Rake</h1>
+
+<h1>Cucumber</h1>
+
+<h1>Rspec</h1>
+
+<h1>etc</h1>
+
+<pre><code>method_missing
+</code></pre>
+
+<h4>private vs public</h4>
+
+<h4>Private really just means "please don't come in."</h4>
+
+<h4>&nbsp;</h4>
+
+<h4>If someone has access to your runtime environment, they are trusted.</h4>
+
+<h4>&nbsp;</h4>
+
+<h4>Spend your time writing code (and testing it), not protecting yourself from other programmers.</h4>
+
+<pre><code>class Fixnum
+  def even?
+    self % 2 == 0
+  end
+end
+
+1.even? #=&gt; false
+</code></pre>
+
+<h4>everything is an object</h4>
+
+<h4>Classes are objects</h4>
+
+<h4>&nbsp;</h4>
+
+<h4>class methods are really just methods on the class object.</h4>
+
+<h4>&nbsp;</h4>
+
+<h4>Code evaluated in the scope of a class definition acts on the class object.</h4>
+
+<p>Have fun!</p>

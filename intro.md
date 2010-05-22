@@ -2,9 +2,9 @@
 <LINK REL=StyleSheet HREF="styles.css" TYPE="text/css">
 <img src="img/railsbridge_logo.png">
 # Ruby on Rails Workshop
-### May 21st & 22nd, 2010
-#####wireless: paceguest, username RubyGuest10, pwd RubyP0st
-#####hashtag: #nycrubywomen
+### May 22st & 23rd, 2010
+#####wireless: pivotalguest
+#####hashtag: #rorw4w #railsbridge
 
 !SLIDE
 
@@ -19,10 +19,10 @@
   * github.com/railsbridge
 
 !SLIDE centereverything
+<img src="img/scribd_logo.jpg" />&nbsp;&nbsp;<br/>
+<img src="img/heroku_logo.png" />&nbsp;&nbsp;
+<img src="img/honk_logo.jpg" />&nbsp;&nbsp;<br/>
 <img src="img/pivotal_labs_logo.png" />&nbsp;&nbsp;
-<img src="img/engineyard_logo.png" />&nbsp;&nbsp;
-<img src="img/barbarian_group_logo.jpg" width="400" />&nbsp;&nbsp;
-<img src="img/hashrocket_logo.png" />&nbsp;&nbsp;
 <img src="img/railsbridge_logo.png" height="200" />&nbsp;&nbsp;
 
 !SLIDE
@@ -96,9 +96,6 @@
   * 2007 - shipped with Mac OS 10.5 "Leopard"
 
 !SLIDE
-<img src="img/mvc.jpg">
-
-!SLIDE
 ## The Rails Philosophy
 * Opinionated
 * Convention over configuration
@@ -106,6 +103,9 @@
   * less code means it's easier to maintain & modify
 * Test Driven Development (TDD)
 * Minimal code - maximal effect
+
+!SLIDE
+<img src="img/mvc_simple.png">
 
 !SLIDE
 ## Agile development
@@ -130,6 +130,11 @@
 * **heroku**: free Rails hosting.
 
 !SLIDE
+## Materials
+* http://www.scribd.com/openworkshops
+* http://wiki.devchix.com/index.php?title=Rails_Curriculum
+
+!SLIDE
 ## Today's project
 <a href="http://www.ultrasaurus.com/rubyworkshop/app_design/"><img src="img/unauthenticated_home-0.jpg" width="946" height="420"/></a>
 
@@ -140,7 +145,8 @@
 * 10:30-11:20 Session 1
 * 11:30-12:20 Session 2
 * 12:30-1:30 Lunch
-* 1:30-2:20 Session 3
-* 2:30-3:20 Session 4
-* 3:30-4:00 Wrap up & final questions
-* 4:00-?? Afterparty @ Harry's Italian (2 Gold St @ Platt)
+* 1:30-2:45 Session 3
+* 3:00-4:00 Session 4
+* 4:00-4:30 Wrap up & final questions
+* 5:00-?? Afterparty @ Jillian's<br/>
+  (101 4th St between Mission & Howard) 
