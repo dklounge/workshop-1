@@ -12,6 +12,7 @@ body {
   font-size: 38px;
   color: #111;
   background: #fff;
+  overflow: hidden;
 }
 
 pre {
@@ -28,6 +29,17 @@ blockquote {
 
 ul {
   padding: 0 0 0 1em;
+}
+
+#instructions {
+  position: absolute;
+  width: 99%;
+  text-align: center;
+  background: #ffd;
+  font-size: 20px;
+  padding: 10px;
+  font-weight: bold;
+  border-bottom: 1px solid #ff0;
 }
 
 #slides {
@@ -117,34 +129,8 @@ ul {
 .code .vg { color: #008080 } /* Name.Variable.Global */
 .code .vi { color: #008080 } /* Name.Variable.Instance */
 .code .il { color: #009999 } /* Literal.Number.Integer.Long */
+
     </style>
-    
-      <style type="text/css" media="screen">
-        .centereverything {
-  text-align: center;
-}
-
-.slide-hilite {
-  text-color: red;
-}
-
-.big-text {
-  font-size: 150%;
-}
-
-.table-code {
-  font-family: Bitstream Vera Sans Mono;
-}
-li {
-    padding: 8;
-}
-
-td {
-    font-size: 32px; 
-    padding: 8;
-}
-
-      </style>
     
     <script type="text/javascript">
       /*!
@@ -4756,43 +4742,43 @@ jQuery.extend( jQuery.easing,
   var allSlides = function() {
     return $('#slides #track > div');
   }
-  
+
   var slideDimensions = function() {
     return {
       width: $(window).width(),
       height: $(window).height()
     }
   }
-  
+
   var getIndex = function() {
     var index = document.location.hash.split('#')[1];
     return Number(index);
   }
-  
+
   var setIndex = function(idx) {
     var newSlide = '#slide-' + idx;
     if ($(newSlide).size() < 1) { return false; }
     document.location.hash = '#' + idx;
   }
-  
+
   var setSlideDimensions = function() {
     var dimensions = slideDimensions();
-    
+
     $('#slides').height(dimensions.height);
     $('#slides').width(dimensions.width);
-    
+
     allSlides().height(dimensions.height);
     allSlides().width(dimensions.width);
   }
-  
+
   var showCurrentSlide = function() {
     var dimensions = slideDimensions();
     var index = getIndex();
     var offset = (index || 0) * dimensions.width;
-    
-    $('#track').animate({ marginLeft: '-' + offset + 'px' }, 0);
+
+    $('#track').animate({ marginLeft: '-' + offset + 'px' }, 200);
   }
-  
+
   var verticalAlign = function() {
     var dimensions = slideDimensions();
     var margin = (dimensions.height - $(this).height()) / 2;
@@ -4806,44 +4792,66 @@ jQuery.extend( jQuery.easing,
       overflow: 'hidden',
       fontSize: '26px'
     });
-    
+
     allSlides().find('.content').each(verticalAlign);
   }
-  
+
   var adjustSlides = function() {
     var dimensions = slideDimensions();
-    
+
     setSlideDimensions();
     showCurrentSlide();
 
     formatGist();
   }
-  
+
   var move = function(event) {
     var DIRECTIONS = {
-      1: 1,   // LEFT MOUSE BTN
-      3: 1,   // RIGHT MOUSE BTN
-      37: -1, // ARROW LEFT
-      39: 1,  // ARROW RIGHT
-      32: 1,  // SPACE BAR
-      13: 1   // RETURN
+      37: -1,     // ARROW LEFT
+      39: 1,      // ARROW RIGHT
+      32: 1,      // SPACE BAR
+      13: 1,      // RETURN
+      27: 'home', // ESCAPE
+      left: -1,
+      right: 1
     }
-    
-    if (dir = DIRECTIONS[event.which]) {
-      setIndex(getIndex() + dir);
+
+    if (dir = DIRECTIONS[event.which || event]) {
+      if (dir == 'home') {
+        event.preventDefault();
+        event.stopPropagation();
+        location.href = '/';
+      } else {
+        $('#instructions').slideUp(100);
+        setIndex(getIndex() + dir);
+      }
     }
   }
-  
+
+  function clickMove(e) {
+    if (e.pageX < ($(window).width() / 2)) {
+      move('left');
+    } else {
+      move('right');
+    }
+  }
+
+  function hideInstructions() {
+    $('#instructions').slideUp(200);
+  }
+
   $(window).bind('resize', function() { adjustSlides(); });
   $(document).bind('keydown', move);
-  $(document).bind('click', move);
   $(document).bind('hash.changed', adjustSlides);
+  $(document).bind('click', clickMove);
   $(document).ready(function() {
     setIndex(getIndex() || 0);
     $(this).trigger('hash.changed');
     if (document.location.search.indexOf('notes') == 1) {
       $('.notes').show();
     }
+
+    window.setTimeout(hideInstructions, 3000);
   });
 })(jQuery);
 
@@ -4851,29 +4859,26 @@ jQuery.extend( jQuery.easing,
     
   </head>
   <body>
+    <div id="instructions">
+      Use the left/right arrow keys to navigate.
+    </div>
     <div id="slides">
       <div id="track">
         
-          <div class=" centereverything">
+          <div class="">
             <div id="slide-0" class="content">
-              <img src="img/railsbridge_logo.png"><h1 id="ruby_on_rails_workshop">Ruby on Rails Workshop</h1><h3 id="june_13th_2009">June 13th, 2009</h3>
+              <p>The Complete Beginner's Guide to Programming</p>
             </div>
           </div>
         
           <div class="">
             <div id="slide-1" class="content">
-              <p>The Complete Beginner&rsquo;s Guide to Programming</p>
-            </div>
-          </div>
-        
-          <div class="">
-            <div id="slide-2" class="content">
               <p>What is a program?</p>
             </div>
           </div>
         
           <div class=" ">
-            <div id="slide-3" class="content">
+            <div id="slide-2" class="content">
               <table><tr>
 <td valign="center">
 <img src="img/os_x_logo.jpg">
@@ -4889,59 +4894,52 @@ jQuery.extend( jQuery.easing,
           </div>
         
           <div class="">
-            <div id="slide-4" class="content">
-              <img src="img/acrobat.jpg"><img src="img/finder.png"><img src="img/firefox.png"><img src="img/itunes.png"><img src="img/quicktime.jpg"><img src="img/safari.png"><br><img src="img/ms_office.png"><br><img src="img/wordpress.jpg">
+            <div id="slide-3" class="content">
+              <p><img src="img/acrobat.jpg"><img src="img/finder.png"><img src="img/firefox.png"><img src="img/itunes.png"><img src="img/quicktime.jpg"><img src="img/safari.png"></p><br><p><img src="img/ms_office.png"></p><br><p><img src="img/wordpress.jpg"></p>
             </div>
           </div>
         
           <div class=" centereverything">
-            <div id="slide-5" class="content">
-              <img src="img/web_app_in_rails.jpg">
+            <div id="slide-4" class="content">
+              <p><img src="img/web_app_in_rails.jpg"></p>
             </div>
           </div>
         
           <div class="">
-            <div id="slide-6" class="content">
+            <div id="slide-5" class="content">
               <p>How do I write one?</p>
             </div>
           </div>
         
           <div class="">
-            <div id="slide-7" class="content">
+            <div id="slide-6" class="content">
               <ul>
-<li>Learn about customer&rsquo;s requirements</li>
-
-<li>Translate to &ldquo;stories&rdquo;</li>
-
+<li>Learn about customer's requirements</li>
+<li>Translate to "stories"</li>
 <li>Pick a story that seems doable</li>
-
 <li>Write code that does it</li>
-
 <li>Show your work to the customer, get feedback</li>
-
 <li>Based on feedback, adjust your stories</li>
-
-<li>When a story is done, go back to &ldquo;pick a story&rdquo;</li>
-
+<li>When a story is done, go back to "pick a story"</li>
 <li>Repeat until app is finished!</li>
 </ul>
             </div>
           </div>
         
           <div class="">
-            <div id="slide-8" class="content">
-              <h2 id="lets_start_writing_code">Let&rsquo;s start writing code!</h2>
+            <div id="slide-7" class="content">
+              <h2>Let's start writing code!</h2>
             </div>
           </div>
         
           <div class="">
-            <div id="slide-9" class="content">
+            <div id="slide-8" class="content">
               <table width="100%">
 <tr>
-<td align="center" width="50%">
+<td width="50%" align="center">
 <img src="img/git_bash.png">
 </td>
-<td align="center" width="50%">
+<td width="50%" align="center">
 <img src="img/mac_terminal_sm.png">
 </td>
 </tr>
@@ -4958,16 +4956,16 @@ Mac OS X
           </div>
         
           <div class=" centereverything">
-            <div id="slide-10" class="content">
-              <span class="big-text"><pre><code>
+            <div id="slide-9" class="content">
+              <p><span class="big-text"><pre><code>
 irb
-</code></pre></span>
+</code></pre></span></p>
             </div>
           </div>
         
           <div class="">
-            <div id="slide-11" class="content">
-              <h2 id="variables">Variables</h2><h3 id="words_that_hold_information">words that hold information</h3><pre><code>
+            <div id="slide-10" class="content">
+              <h2>Variables</h2><h3>words that hold information</h3><pre><code>
 &gt; my_variable = 5
 =&gt; 5
 &gt; my_other_variable = "hi"
@@ -4977,8 +4975,8 @@ irb
           </div>
         
           <div class="">
-            <div id="slide-12" class="content">
-              <h2 id="types_of_information">Types of information</h2><h3 id="text_numberscollections">text, numbers&hellip;collections?</h3><pre><code>
+            <div id="slide-11" class="content">
+              <h2>Types of information</h2><h3>text, numbers...collections?</h3><pre><code>
 &gt; fruits = ["kiwi", "strawberry", "plum"]
 =&gt; ["kiwi", "strawberry", "plum"]
 &gt; states = {"CA" =&gt; "California", "DE" =&gt; "Delaware"}
@@ -4988,8 +4986,8 @@ irb
           </div>
         
           <div class="">
-            <div id="slide-13" class="content">
-              <h2 id="operators">Operators</h2><h3 id="doing_stuff_with_variables">doing stuff with variables</h3><pre><code>
+            <div id="slide-12" class="content">
+              <h2>Operators</h2><h3>doing stuff with variables</h3><pre><code>
 &gt; my_variable + 2
 =&gt; 7
 &gt; my_variable * 3
@@ -5003,9 +5001,9 @@ irb
           </div>
         
           <div class="">
-            <div id="slide-14" class="content">
-              <h2 id="loops">Loops</h2><h3 id="doing_the_same_thing_a_bunch_of_times">doing the same thing a bunch of times</h3><table><tr>
-<td valign="top" width="37%">
+            <div id="slide-13" class="content">
+              <h2>Loops</h2><h3>doing the same thing a bunch of times</h3><table><tr>
+<td width="37%" valign="top">
 <code><b>
 &gt; puts fruits[0]<br>
 kiwi<br>
@@ -5019,7 +5017,7 @@ plum<br>
 </b></code>
 </td>
 <td width="6%"><font size="150%">VS</font></td>
-<td valign="top" width="57%">
+<td width="57%" valign="top">
 <code><b>
 &gt; fruits.each do |f|<br>
 *   puts f<br>
@@ -5035,8 +5033,8 @@ plum<br>
           </div>
         
           <div class="">
-            <div id="slide-15" class="content">
-              <h2 id="conditionals">Conditionals</h2><h3 id="doing_something_only_if_a_condition_is_met">doing something only if a condition is met</h3><pre><code>
+            <div id="slide-14" class="content">
+              <h2>Conditionals</h2><h3>doing something only if a condition is met</h3><pre><code>
 &gt; fruits.each do |f|
 *   puts f if f == "plum"
 &gt; end
@@ -5047,20 +5045,20 @@ plum
           </div>
         
           <div class="">
+            <div id="slide-15" class="content">
+              <h2>Now we've done some Ruby...</h2><h2>...let's do some Rails!</h2>
+            </div>
+          </div>
+        
+          <div class=" centereverything">
             <div id="slide-16" class="content">
-              <h2 id="now_weve_done_some_ruby">Now we&rsquo;ve done some Ruby&hellip;</h2><h2 id="lets_do_some_rails">&hellip;let&rsquo;s do some Rails!</h2>
+              <p><img src="img/web-application.png"></p>
             </div>
           </div>
         
           <div class=" centereverything">
             <div id="slide-17" class="content">
-              <img src="img/web-application.png">
-            </div>
-          </div>
-        
-          <div class=" centereverything">
-            <div id="slide-18" class="content">
-              <img src="img/mvc.jpg">
+              <p><img src="img/mvc_simple.png"></p>
             </div>
           </div>
         

@@ -1,9 +1,3 @@
-!SLIDE centereverything
-
-<img src="img/railsbridge_logo.png">
-# Ruby on Rails Workshop
-### June 13th, 2009
-
 !SLIDE
 
 The Complete Beginner's Guide to Programming
@@ -175,5 +169,5 @@ plum
 
 !SLIDE centereverything
 
-<img src="img/mvc.jpg">
+<img src="img/mvc_simple.png">
 
