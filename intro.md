@@ -2,27 +2,27 @@
 <LINK REL=StyleSheet HREF="styles.css" TYPE="text/css">
 <img src="img/railsbridge_logo.png">
 # Ruby on Rails Workshop
-### May 21st & 22rd, 2010
-#####wireless: pivotalguest
-#####hashtag: #rorw4w #railsbridge
+### September 10th & 11th, 2010
+#### hashtag #sfruby
+#### wireless pivotalguest
 
 !SLIDE
 
 ## Open source workshop
-* Community project
-  * Many individuals 
-  * RailsBridge
-  * DevChix
-* Open materials
-  * Workshop planning: DevChix wiki
-  * Slides: github, slidedown
-  * github.com/railsbridge
+
+#### It's a community project!
+* Many individuals
+* RailsBridge
+* DevChix
+
+#### All materials are open!
+* DevChix wiki, RailsBridge wiki
+* Slides: github, slidedown
+* See github.com/railsbridge
 
 !SLIDE centereverything
-<img src="img/scribd_logo.jpg" />&nbsp;&nbsp;<br/>
-<img src="img/heroku_logo.png" />&nbsp;&nbsp;
-<img src="img/honk_logo.jpg" />&nbsp;&nbsp;<br/>
 <img src="img/pivotal_labs_logo.png" />&nbsp;&nbsp;
+<img src="img/captain_recruiter.jpg" />&nbsp;&nbsp;
 <img src="img/railsbridge_logo.png" height="200" />&nbsp;&nbsp;
 
 !SLIDE
@@ -117,8 +117,9 @@
 
 
 !SLIDE
-## Goal
-* By the end of the day, you will have built and deployed a web application live on the internet
+## Goal:
+### &nbsp;
+### By the end of the day, you will have built and deployed a web application - live on the internet!
 
 !SLIDE
 ## Tools we'll be working with
@@ -149,5 +150,4 @@
 * 1:30-2:45 Session 3
 * 3:00-4:00 Session 4
 * 4:00-4:30 Wrap up & final questions
-* 5:00-?? Afterparty @ Jillian's<br/>
-  (101 4th St between Mission & Howard) 
+* 5:00-?? Afterparty @ ??<br/>
