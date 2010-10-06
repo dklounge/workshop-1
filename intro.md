@@ -2,9 +2,8 @@
 <LINK REL=StyleSheet HREF="styles.css" TYPE="text/css">
 <img src="img/railsbridge_logo.png">
 # Ruby on Rails Workshop
-### September 10th & 11th, 2010
-#### hashtag #sfruby
-#### wireless pivotalguest
+### October 5th & 6th, 2010
+#### hashtag #mountainrb
 
 !SLIDE
 
@@ -21,13 +20,23 @@
 * See github.com/railsbridge
 
 !SLIDE centereverything
-<img src="img/pivotal_labs_logo.png" />&nbsp;&nbsp;
-<img src="img/captain_recruiter.jpg" />&nbsp;&nbsp;
-<img src="img/railsbridge_logo.png" height="200" />&nbsp;&nbsp;
+<img src="img/pivotal_labs_logo.png" width="200" />&nbsp;&nbsp;
+<img src="img/mountainrb.jpg" width="300"/>&nbsp;&nbsp;
+<img src="img/blazing_cloud_logo.png" width="200"/>&nbsp;&nbsp;
 
 !SLIDE
 
 # Why are we here?
+* www.bouldercountysafehouse.org
+* www.bouldershelter.org
+* zbelieve.org
+* www.kempe.org
+* www.bcap.org
+
+!SLIDE
+
+# Why are we here?
+* Ruby on Rails!
 
 !SLIDE
 
@@ -133,8 +142,7 @@
 !SLIDE
 ## Materials
 * slides: http://railsbridge.github.com/workshop
-* http://www.scribd.com/openworkshops
-* http://wiki.devchix.com/index.php?title=Rails_Curriculum
+* http://wiki.devchix.com/index.php?title=Rails_3_Curriculum
 
 !SLIDE
 ## Today's project
@@ -142,12 +150,12 @@
 
 !SLIDE 
 ## Schedule
-* 9:30-10:00 Sign in, get coffee
-* 10:00-10:30 Intro
-* 10:30-11:20 Session 1
-* 11:30-12:20 Session 2
-* 12:30-1:30 Lunch
-* 1:30-2:45 Session 3
-* 3:00-4:00 Session 4
-* 4:00-4:30 Wrap up & final questions
-* 5:00-?? Afterparty @ ??<br/>
+* 9:00-9:30 Sign in, get coffee
+* 9:30-10:00 Intro
+* 10:00-10:50 Session 1
+* 11:00-12:00 Session 2
+* 12:00-1:00 Lunch
+* 1:00-2:15 Session 3
+* 2:30-3:30 Session 4
+* 3:30-4:00 Wrap up & final questions
+* 5:00- conference reception at the Boulderado
