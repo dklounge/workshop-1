@@ -40,7 +40,7 @@
   * route  map.resources :topics
 
 !SLIDE
-![Architecture](http://www.gliffy.com/pubdoc/1734447/L.jpg)
+![Architecture](../img/request-response.png)
 
 !SLIDE
 # Model-View-Controller

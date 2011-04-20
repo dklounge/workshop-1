@@ -13,6 +13,6 @@
 * Vote belongs_to :topics
 
 !SLIDE
-![has_many](http://www.gliffy.com/pubdoc/1735584/L.jpg)
+![has_many](../img/has-many.png)
 
 

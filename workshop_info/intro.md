@@ -1,6 +1,6 @@
 !SLIDE centereverything
 <LINK REL=StyleSheet HREF="styles.css" TYPE="text/css">
-<img src="img/railsbridge_logo.png">
+<img src="../img/railsbridge_logo.png">
 # Ruby on Rails Workshop
 ### October 5th & 6th, 2010
 #### hashtag #mountainrb
@@ -20,9 +20,9 @@
 * See github.com/railsbridge
 
 !SLIDE centereverything
-<img src="img/pivotal_labs_logo.png" width="200" />&nbsp;&nbsp;
-<img src="img/mountainrb.jpg" width="300"/>&nbsp;&nbsp;
-<img src="img/blazing_cloud_logo.png" width="200"/>&nbsp;&nbsp;
+<img src="../img/pivotal_labs_logo.png" width="200" />&nbsp;&nbsp;
+<img src="../img/mountainrb.jpg" width="300"/>&nbsp;&nbsp;
+<img src="../img/blazing_cloud_logo.png" width="200"/>&nbsp;&nbsp;
 
 !SLIDE
 
@@ -44,17 +44,17 @@
 
 !SLIDE centereverything
 
-<img src="img/web-application.png">
+<img src="../img/web-application.png">
 
 !SLIDE
 
 <table width="100%">
 <tr>
 <td align="center">
-<img src="img/ruby-logo.jpg" width="250">
+<img src="../img/ruby-logo.jpg" width="250">
 </td>
 <td align="center">
-<img src="img/rails_logo.jpg">
+<img src="../img/rails_logo.jpg">
 </td>
 </tr>
 <tr>
@@ -70,10 +70,10 @@
 <table width="100%">
 <tr>
 <td align="center">
-<img src="img/ruby-logo.jpg" width="250">
+<img src="../img/ruby-logo.jpg" width="250">
 </td>
 <td align="center">
-<img src="img/rails_logo.jpg">
+<img src="../img/rails_logo.jpg">
 </td>
 </tr>
 <tr>
@@ -114,12 +114,12 @@
 * Minimal code - maximal effect
 
 !SLIDE
-<img src="img/mvc_simple.png">
+<img src="../img/mvc_simple.png">
 
 !SLIDE
 ## Agile development
 
-<img src="img/agile.jpg"/>
+<img src="../img/agile.jpg"/>
 
 * Pair programming
 * Test-driven or Behavior-driven development
@@ -146,7 +146,7 @@
 
 !SLIDE
 ## Today's project
-<a href="http://www.ultrasaurus.com/rubyworkshop/app_design/"><img src="img/unauthenticated_home-0.jpg" width="946" height="420"/></a>
+<a href="http://www.ultrasaurus.com/rubyworkshop/app_design/"><img src="../img/unauthenticated_home-0.jpg" width="946" height="420"/></a>
 
 !SLIDE 
 ## Schedule

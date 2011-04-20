@@ -1,3 +1,0 @@
-#!/bin/bash
-# first argument is markdown file, second is html notes
-sed '/^!SLIDE/d' $1 | perl Markdown.pl > $2

@@ -9,29 +9,29 @@ What is a program?
 !SLIDE 
 
 <table><tr><td valign="center">
-<img src="img/os_x_logo.jpg">
+<img src="../img/os_x_logo.jpg">
 </td><td valign="center">
-<img src="img/windows_logo.gif">
+<img src="../img/windows_logo.gif">
 </td><td valign="center">
-<img src="img/linux_logo.gif">
+<img src="../img/linux_logo.gif">
 </td></tr></table>
 
 !SLIDE
 
-<img src="img/acrobat.jpg">
-<img src="img/finder.png">
-<img src="img/firefox.png">
-<img src="img/itunes.png">
-<img src="img/quicktime.jpg">
-<img src="img/safari.png">
+<img src="../img/acrobat.jpg">
+<img src="../img/finder.png">
+<img src="../img/firefox.png">
+<img src="../img/itunes.png">
+<img src="../img/quicktime.jpg">
+<img src="../img/safari.png">
 <br/>
-<img src="img/ms_office.png">
+<img src="../img/ms_office.png">
 <br/>
-<img src="img/wordpress.jpg">
+<img src="../img/wordpress.jpg">
 
 !SLIDE centereverything
 
-<img src="img/web_app_in_rails.jpg">
+<img src="../img/web_app_in_rails.jpg">
 
 !SLIDE
 
@@ -55,9 +55,9 @@ How do I write one?
 !SLIDE
 
 <table width="100%"><tr><td width="50%" align="center">
-<img src="img/git_bash.png">
+<img src="../img/git_bash.png">
 </td><td width="50%" align="center">
-<img src="img/mac_terminal_sm.png">
+<img src="../img/mac_terminal_sm.png">
 </td></tr><tr><td align="center">
 Windows
 </td><td align="center">
@@ -165,9 +165,9 @@ plum
 
 !SLIDE centereverything
 
-<img src="img/web-application.png">
+<img src="../img/web-application.png">
 
 !SLIDE centereverything
 
-<img src="img/mvc_simple.png">
+<img src="../img/mvc_simple.png">
 

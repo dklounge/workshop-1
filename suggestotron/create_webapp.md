@@ -5,7 +5,7 @@
 * Register and login
 
 !SLIDE
-<img src="http://www.ultrasaurus.com/rubyworkshop/app_design/authenticated_home.jpg" width="934" height="436"/>
+<img src="../img/authenticated_home.jpg"/>
 
 !SLIDE
 # Let's build a web app
@@ -116,4 +116,4 @@
 
 !SLIDE
 
-<img src="http://github.com/alexch/mission/raw/678c36599c3f49ed4512bac91038179380ce1f01/git.png"/>
+<img src="../img/git.png"/>
