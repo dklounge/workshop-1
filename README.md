@@ -1,6 +1,7 @@
 
 This repo contains several slide presentations for use during the Railsbridge Open Workshops (specifically the Ruby For Women Workshops).
 
+Not all presentations are ready to be shown yet!
 
 # Installing Showoff
 
@@ -37,7 +38,7 @@ This should be doable but for now it's not easy. (It depends on showoff allowing
 
 # Editing slides
 
-Slides are in [Markdown]() format. Showoff will read all `.md` files in alphabetical order.
+Slides are in [Markdown](http://daringfireball.net/projects/markdown/syntax) format. Showoff will read all `.md` files in alphabetical order.
 
 You can also add custom `.css` and `.js` files, which will get imported into all slide sets.
 
