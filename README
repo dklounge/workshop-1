@@ -1,7 +1,8 @@
 
 
-Using slidedown to generate the workshop slides
-   sudo gem install slidedown
+Using showoff to generate the workshop slides
+    sudo gem install showoff
+    showoff serve
    slidedown workshop.md > workshop.html
    open workshop.html
 
