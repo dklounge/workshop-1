@@ -1,8 +1,13 @@
+<!SLIDE bullets subsection>
 # Teaching Tips
 
-* Following is some advice about how to teach a Railsbridge Open Workshop
-* We'll also ask you to share your experiences teaching (or TA'ing) with the room
+Following is some advice about how to teach a Railsbridge Open Workshop
 
+We'll also ask you to share your experiences teaching (or TA'ing) with the room
+
+.notes Hi! These are some notes for the teacher of teachers. :-)
+
+<!SLIDE bullets>
 # Schedule
 
 * Everybody comes together for opening session
@@ -11,17 +16,20 @@
 * Everyone back together for closing session
   * Make sure your students know a closing session is coming so they don't run off
 
+<!SLIDE bullets>
 # Stress != Learning
 
 * Before anyone touches a keyboard, set up a welcoming classroom environment.
 * smile! :):):)
 * make eye contact
 
+<!SLIDE bullets>
 # Never grab someone's keyboard
 
 * This can be offputting and even scary
 * Instead, ask "Do you mind if I type?" or "May I show you what I mean?"
 
+<!SLIDE bullets>
 # Introductions & Icebreakers
 
 * Give people a chance to get to know each other in a casual way.
@@ -35,20 +43,23 @@
   * what one weird thing are you good at?
 * If time, you can brainstorm/discussion to get everyone talking
 
+<!SLIDE bullets>
 # Tell your own story
 
 tell your story. tell why you like programming and teaching. beware of bragging. tell why you care! why are you getting up on saturday morning to come in here.  
 
+<!SLIDE bullets>
 # Ground Rules
 
-People may have missed these during the opening session, so briefly cover
+* People may have missed these during the opening session, so briefly cover
 
-* Schedule
-* What to expect from the day
-* When is lunch?
-* Where is the bathroom?
-* Questions are always welcome. Even dumb ones.
+  * Schedule
+  * What to expect from the day
+  * When is lunch?
+  * Where is the bathroom?
+  * Questions are always welcome. Even dumb ones.
 
+<!SLIDE bullets>
 # Questions are good
 
 * Get people comfortable asking questions
@@ -56,7 +67,7 @@ People may have missed these during the opening session, so briefly cover
 * Ask for questions. even dumb ones. 
   * Later in the workshop, anticipate dumb questions if possible)
 
-* barrier to asking questions: vocabulary! they don’t know what methods are, etc.
+  * barrier to asking questions: vocabulary! they don’t know what methods are, etc.
 
 * respond positively to the first  few questions
 
@@ -65,6 +76,7 @@ People may have missed these during the opening session, so briefly cover
   * great question
   * i’ve wondered that myself
 
+<!SLIDE bullets>
 # Slow down
 
 Many teachers talk too fast. Make sure to pace yourself.
@@ -82,6 +94,7 @@ Many teachers talk too fast. Make sure to pace yourself.
 * when a question is posed, let another student answer it first
 * lay this expectation out explicitly at the beginning that they should try to answer each other’s questions.
 
+<!SLIDE bullets>
 # General tips
 
 
@@ -90,6 +103,7 @@ Many teachers talk too fast. Make sure to pace yourself.
  
 
 
+<!SLIDE bullets>
 # How do you check their understanding? 
 
 * Some things that don't work:  
@@ -114,6 +128,7 @@ Many teachers talk too fast. Make sure to pace yourself.
  
  
 
+<!SLIDE bullets>
 # How to effectively use TA’s
 
 * have them debug/look at students’ computer screens
@@ -128,6 +143,7 @@ Many teachers talk too fast. Make sure to pace yourself.
  
  
  
+<!SLIDE bullets>
 # Teaching Programming
 
 How would you explain these concepts to a total beginner?
