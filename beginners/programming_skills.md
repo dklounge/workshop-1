@@ -70,3 +70,18 @@ This presentation covers the basic skills required to be a programmer...
   * the term "multitasking" actually started with computers and migrated to common usage
 * It also helps programs communicate with hardware (video, memory, disk, network...)
 
+# Version Control
+* Definition
+* Terminology
+  * "check out"
+  * "check in"/"commit"
+  * "diff"
+  * "merge"
+  
+# Version Control with git
+* More Terminology
+  * "add"
+  * "push"
+  * "pull"
+* Diagram
+  * ![git](img/git.png)

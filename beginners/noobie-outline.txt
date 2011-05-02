@@ -30,6 +30,7 @@ Tie everything together by explaining that source code are instructions that are
 Memory, CPU,Hard Disk::
 Very briefly explain how a computer works and all the moving parts (literally) starting with hard drive, memory, and CPU.
 Give the group basic understanding of where the source code is stored and how and where it is executed.
+---
 Hello World
 Write hello world.  Run it.
 Extend it to do “hello what’s your name”, “hello, bob!”  puts and gets.
