@@ -147,6 +147,31 @@ The easy way, with "do...end" rather than "{...}"
     => ["kiwi", "strawberry", "plum"]
 
 !SLIDE
+# Sinatra 
+
+## hello.rb
+
+    @@@ Ruby
+    require 'rubygems'
+    require 'sinatra'
+
+    get '/' do
+      "<b>Hello, <i>bang bang</i>!"
+    end
+
+!SLIDE commandline
+# Sinatra
+
+    $ gem install sinatra
+    $ ruby hello.rb
+    == Sinatra/1.2.6 has taken the stage on 4567 for development with backup from Thin
+    >> Thin web server (v1.2.7 codename No Hup)
+    >> Maximum connections set to 1024
+    >> Listening on 0.0.0.0:4567, CTRL+C to stop
+
+then open a browser to <http://localhost:4567/>
+
+!SLIDE
 
 ## Now we've done some Ruby...
 ## ...let's do some Rails!

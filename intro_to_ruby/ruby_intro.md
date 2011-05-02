@@ -361,7 +361,9 @@ Blocks can also return a value. Map translates each item in an array.
 
 !SLIDE
 
-# Ruby Quickstart for Refugees:
+# Ruby Quickstart for Refugees
+
+<https://gist.github.com/190567>
  
     --
  

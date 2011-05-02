@@ -1,14 +1,25 @@
 <!SLIDE bullets subsection>
 # Teacher Training
 
-<!SLIDE bullets incremental>
+<!SLIDE bullets>
 # What are we doing here?
-* Over the next two hours, we will share advice about how to teach a Railsbridge Open Workshop.
+* Over the next two hours, we will share advice about how to teach/TA a Railsbridge Open Workshop.
 * This will be a conversation, not a lecture. 
-  * You will share your experiences teaching (or TA'ing) with the room
-  * (yes, this is a sneaky way of modeling how you should teach your class)
+  * You will share your experiences and advice
+* (yes, this is a sneaky way of modeling how you should teach your class)
+* We will also walk through the whole curriculum (so there's no surprises)
 
 <!SLIDE bullets>
+# About this presentation
+* Structured around questions
+  * Instructor will ask the question
+  * Participants will discuss
+  * Instructor will eventually reveal answers
+  * Answers were mostly provided during earlier sessions
+* We probably won't have time to cover it all
+  * Please look over it on the web later
+
+<!SLIDE bullets incremental>
 # Who are you?
 
 * Who has taught before?
@@ -20,28 +31,60 @@
 .notes Tell the class about yourself, your experience, your motivation.
 
 <!SLIDE bullets incremental>
-# What is the goal of the Railsbridge Open Workshop?
+# What are the goals of the Railsbridge Open Workshop?
 
 * Teaching Ruby on Rails?
   * yes, but...
-* Teaching Programming?
+* Teaching programming?
   * yes, but...
 * Teaching that code is fun?
   * Yes!
+* increase number of female programmers and teachers
+* show that programming is totally not scary
+  
+<!SLIDE bullets incremental>
+# What special challenges do we face as teachers of women?
+* Madeline Kunin's research: women self-filter more than men
+
 
 <!SLIDE bullets incremental>
 # Stress vs. Learning
 * Before anyone touches a keyboard, set up a welcoming classroom environment.
 
-<!SLIDE bullets incremental>
+<!SLIDE smbullets incremental>
 # How to set up a welcoming classroom environment?
 
-* smile! :):):)
+* Smile `:-)`
+  * but don't be creepy `>;-{`
 * make eye contact
+*  Tell people how long to expect the process to take
+*  Admit your ignorance
+*  Tell people it's ok to make mistakes
+*  Tell people to take breaks when you're frustrated
+*  Assume that anyone you're teaching to has 0 knowledge but infinite intelligence
+*  Check in a lot
+*  Use normal language over jargon
+* Call newly arrived people in to circle or table
+*  Ask new people to introduce themselves
+*  Say up front that it'll be a collaborative learning environment
+    * Encourage students to answer each others questions
+*  Ask students "What do you want to get out of class?"
+    * Maybe write those on a board
+*  Keep track of students' backgrounds and call back during the class
+    * "Oh, you're a DBA, you'll like this part"
+*  Humor
+* Students have diverse backgrounds
+  * Treat them with respect and humility
+  * Try to learn from your students' expertise
+*  Don't say "no" 
+  * say "you're heading in the right direction"
+  * or "yes, and"
+*  Don't say "any questions?" 
+  * say "What questions do you have?"
 * ...?
 
 <!SLIDE bullets incremental>
-# Introductions & Icebreakers
+# Introductions
 
 * Give people a chance to get to know each other in a casual way.
 * Go around the table and ask people to share something about themselves    
@@ -49,21 +92,28 @@
   * experience or profession
   * why are you here? 
     * (better than "what do you want to get out of this?" for beginners)
+* Encourage questions & discussion
+* Tone: be approachable
+
 
 <!SLIDE bullets incremental>
-# More Icebreakers
-* Include something weird or meaningless (to build confidence in speaking out loud)
-  * what's your least favorite ice cream flavor?
-  * what one weird thing are you good at?
-* If time, you can brainstorm/discuss to get everyone talking
+# Icebreakers
+* Include something weird or meaningless
+  * What's your least favorite ice cream flavor?
+  * What one weird thing are you good at?
+  * Tell us one fact about yourself -- "keep it light"
+  * What's the first concert you went to?
+* Pair up for 1 minute, then introduce your partner
+* Remember the point is to get them confident at speaking out loud
 
 <!SLIDE bullets incremental>
 # How to introduce yourself to the class?
-* As a teacher or TA... 
-  * tell your story
-  * tell why you like programming and teaching. 
-  * beware of bragging. 
-  * tell why you care! Why are you getting up on saturday morning to come in here?
+As a teacher or TA... 
+
+* tell your story
+* tell why you like programming and teaching. 
+* beware of bragging. 
+* tell why you care! Why are you getting up on saturday morning to come in here?
 
 <!SLIDE bullets incremental>
 # What else to cover before starting class?
@@ -78,7 +128,6 @@
  People may have missed these during the opening session, so briefly cover...
 
   * Questions are always welcome. Even dumb ones.
-  * Schedule
   * What to expect from the day?
   * Where is the bathroom?
   * When is lunch?
@@ -99,19 +148,38 @@
 * Ask the student to pair up with her neighbor until the next break
 * Ask a TA to take a look at it when they get a chance
 
-<!SLIDE bullets incremental>
+<!SLIDE smbullets incremental>
 # Web Resources
 You should be aware of these, even if you don't tell the students all of them right away.
 
 * devchix wiki
-* workshop github repo (slides and diagrams)
+  * <http://www.wiki.devchix.com/index.php?title=Workshop_Topics>
+  * <http://www.wiki.devchix.com/index.php?title=Rails_3_Curriculum>
 * diagrams:
-  * REST
-  * MVC
-* separate curricula for noobies and post-noobies
+  * REST  <http://www.wiki.devchix.com/index.php?title=Workshop_Diagrams>
+  * MVC <https://github.com/alexch/mission/raw/master/mvc.png>
+  * git <https://github.com/alexch/mission/raw/master/git.png>
+* workshop github repo (slides and diagrams)
+  * <http://github.com/alexch/workshop>
 
 <!SLIDE subsection>
 # General Teaching Advice
+
+<!SLIDE bullets incremental>
+# How to work one-on-one with students?
+* Never grab someone's keyboard
+  * This can be offputting and even scary
+* Use your words!
+  * Instead, ask "Do you mind if I type?" or just "May I?"  
+* How else...?
+
+<!SLIDE bullets incremental>
+# How should the teacher respond to the first few questions?
+* Positively!
+  * i’m glad you said that
+  * what an interesting question
+  * great question
+  * i’ve wondered that myself
 
 <!SLIDE bullets incremental>
 # Questions are good
@@ -127,30 +195,21 @@ You should be aware of these, even if you don't tell the students all of them ri
   * Insecurity
   * ...?
 
-<!SLIDE bullets incremental>
-# How should the teacher respond to the first  few questions?
-* Positively!
-  * i’m glad you said that
-  * what an interesting question
-  * great question
-  * i’ve wondered that myself
-
 <!SLIDE smbullets incremental>
 # Pacing
 * Slow down!
-  * Many teachers talk too fast. Make sure to pace yourself.
-* wait much longer than you feel is comfortable for questions/comments
+* if you’re excited/nervous, you will be talking too fast
+* talk sssssslllllloooooowwwwwwllllllyyyyyyyy. 
+* Wait much longer than you feel is comfortable for questions/comments
   * leave a space for them to ask questions
-* Also make sure to wait for an answer after you ask a question
+  * Also make sure to wait for an answer after you ask a question
   * Count to ten (silently)
-  * chances are, someone else will fill the void
+  * Chances are, someone else will fill the void
 
 <!SLIDE smbullets incremental>
 # Pacing (cont.)
 * Ask about pacing. Ask for feedback.
 * emphasize: this is a learning process 
-* if you’re excited/nervous, you will be talking too fast
-* talk sssssslllllloooooowwwwwwllllllyyyyyyyy. 
 * get the students talking to each other
 
 <!SLIDE bullets incremental>
@@ -159,17 +218,25 @@ You should be aware of these, even if you don't tell the students all of them ri
 * Suggest moving up from noob to post-noob
 * Suggest field promotion to TA
 
+<!SLIDE smbullets incremental>
+# How to effectively use TA's?
+
+* have them debug/look at students’ computer screens
+* pair them with the n00best/most shy students
+* encourage TAs to answer questions
+  * TA's explanation might resonate with a student where yours didn't
+* Treat student like customer
+  * What is underlying concern?
+
 <!SLIDE bullets incremental>
 # Pair programming -- yea or nay?
 * Pros?
 * Cons?
 
 <!SLIDE bullets>
-# How to work one-on-one with students?
-* Never grab someone's keyboard
-  * This can be offputting and even scary
-  * Instead, ask "Do you mind if I type?" or just "May I?"
-* How else...?
+# Install Fest
+* If you go to the install fest, introduce yourself as a TA
+* "I'll be here to help you tomorrow"
 
 <!SLIDE bullets incremental>
 # More general teaching tips
@@ -190,7 +257,7 @@ You should be aware of these, even if you don't tell the students all of them ri
 <!SLIDE smbullets incremental>
 # How do you check their understanding? (more) 
 * keep an eye on body language/facial expressions
-  * ‘i see some confusion. let’s get a question.’
+  * 'i see some confusion. let’s get a question.'
 * pairing off and discussing/explaining
 * ask a less binary question to check understanding
   * how would you do ___
@@ -203,19 +270,6 @@ You should be aware of these, even if you don't tell the students all of them ri
 * pair them off and debug
 * ok to ask the same question twice with slightly different variables
 * don’t let the ringer dictate the pace  
-
-<!SLIDE smbullets incremental>
-# How to effectively use TA’s
-
-* have them debug/look at students’ computer screens
-* have them do the curriculum too
-  * to have them do it a little head
-  * will find snags before students
-  * to answer questions on the side / help debug
-* pair them with the n00best/most shy students
-* give them ownership in the beginning-- set up team teaching environment
-  * have a meeting before to set up this environment
-* feel free to go on tangents 
  
 <!SLIDE subsection>
 # Teaching Programming
