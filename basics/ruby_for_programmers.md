@@ -1,29 +1,15 @@
 !SLIDE
+# Introduction to Ruby for Programmers
 
-<img src="../img/ruby-logo.jpg" width="250">
+<img src="img/ruby-logo.jpg" width="250">
 
 !SLIDE
 
-<table width="100%">
-<tr>
-<td align="center">
-<img src="../img/ruby-logo.jpg" width="250">
-</td>
-<td align="center">
-<img src="../img/rails_logo.jpg">
-</td>
-</tr>
-<tr>
-<td align="center">
-<span class="big-text">Language</span>
-</td>
-<td align="center">
-<span class="big-text">Framework</span>
-</td>
-</tr>
-</table>
-# &nbsp;
-# &nbsp;
+### Ruby is a Language
+<img src="img/ruby-logo.jpg" height="250" width="250">
+
+### Rails is a Framework
+<img src="img/rails_logo.jpg" height="250" width="250">
 
 !SLIDE 
 
@@ -125,15 +111,16 @@ Use parens when you need them
    
 !SLIDE
 
+    @@@ ruby
     >> "Hello".gsub 'H', 'h' 
     => "hello"
 
     >> "Hello".gsub("H", "h").reverse 
     => "olleh"
 
-!SLIDE
+!SLIDE subsection
 
-Variables, symbols, constants
+# Variables, symbols, constants
 
 !SLIDE
 
@@ -145,7 +132,7 @@ we prefer symbols over hardcoded globals or strings. They're very lightweight.
 
 !SLIDE
 
-Collections
+# Collections
 
 !SLIDE
 
@@ -153,6 +140,7 @@ Arrays are sized dynamically and can be of mixed types.
  
 !SLIDE
 
+    @@@ ruby
     a = [1, 2, 3]
     a.push "four" #=> [1, 2, 3, "four"]
     a.pop #=> "four"
@@ -163,34 +151,45 @@ Arrays are sized dynamically and can be of mixed types.
 Hashes are like an associative map
 
 !SLIDE
-    states = {"MA" => "Massachusetts", "CA" => "California"}
+
+    @@@ ruby
+    states = {"MA" => "Massachusetts", 
+              "CA" => "California"}
     states["MA"]
 
 !SLIDE
 
+    @@@ ruby
     my_hash = {:a_symbol => 3, "a string" => 4}
     my_hash[:a_symbol] 
     => 3
 
 !SLIDE
 
-String interpolation
+# String interpolation
+
+    @@@ ruby
+    "string #{2 + 2} string"
+    => "string 4 string"
+
+Any Ruby code can go inside the braces
+
+It gets evaluated and stuck inside the string
 
 !SLIDE
 
-"string #{ruby code} string"
-
-!SLIDE
-
+    @@@ ruby
     >> a = "world"   
     >> puts "hello #{a}"
     hello world
+    
     >> a = 2
     >> puts "hello #{a}"
     hello 2
+    
     >> a = nil
-    >> puts "hello #{a}"
-    hello 
+    >> puts "hello #{a} there"
+    hello  there
 
 
 !SLIDE
@@ -199,6 +198,7 @@ Iteration
 
 !SLIDE
 
+    @@@ ruby
     my_array = ["cat", "dog", ”world"]
     my_array.each do |item|
       puts "hello " + item
@@ -206,6 +206,7 @@ Iteration
 
 !SLIDE
 
+    @@@ ruby
     my_hash = { :type => "cat", 
                 :name => "Beckett", 
                 :breed => "alley cat" }
@@ -220,6 +221,7 @@ Classes and methods
 
 !SLIDE
 
+    @@@ ruby
     class Thing
       def return_something
         "something"
@@ -228,6 +230,7 @@ Classes and methods
 
 !SLIDE
 
+    @@@ ruby    
     class Thing
       def do_something(a,b)
         a + b 
@@ -236,7 +239,8 @@ Classes and methods
 
 
 !SLIDE
-&nbsp;
+
+    @@@ ruby
     var 
     @var
     @@var
@@ -244,7 +248,8 @@ Classes and methods
     VAR
 
 !SLIDE
-&nbsp;
+
+    @@@ ruby
     var   # could be a local variable
     @var  # instance variable
     @@var # class variable
@@ -257,6 +262,7 @@ Methods can take blocks, which are like anonymous functions.
 
 !SLIDE
 
+    @@@ ruby
     my_array = ["cat", "dog", ”world"]
     my_array.each do |item|
       puts "hello " + item
@@ -264,12 +270,14 @@ Methods can take blocks, which are like anonymous functions.
 
 !SLIDE
 
-   def do_something
-      yield
-   end
+    @@@ ruby
+    def do_something
+       yield
+    end
 
 !SLIDE
 
+    @@@ ruby
     [1, 2, 3].each do |item|
        puts "#{item} is #{item.even? ? "even" : "odd"}."
     end
@@ -279,20 +287,22 @@ Methods can take blocks, which are like anonymous functions.
 Blocks can also return a value. Map translates each item in an array.
  
 !SLIDE
- 
+
+    @@@ ruby
     >> ["hello", "world"].map{ |string| string.upcase } 
     => ["HELLO", "WORLD"]
  
+!SLIDE subsection
+
+# more neat things about ruby
+
 !SLIDE
 
-#### more neat things about ruby
-
-!SLIDE
-
-#### duck typing
+## duck typing
  
 !SLIDE
 
+    @@@ ruby
     def print_even_or_odd(array_like_thing)
       array_like_thing.each do |item|
         puts "#{item} is #{item.even? ? "even" : "odd"}."
@@ -301,6 +311,7 @@ Blocks can also return a value. Map translates each item in an array.
  
 !SLIDE
 
+    @@@ ruby
     print_even_or_odd [1, 2, 3]
     print_even_or_odd 1..3
  
@@ -339,6 +350,7 @@ Blocks can also return a value. Map translates each item in an array.
  
 !SLIDE
 
+    @@@ ruby
     class Fixnum
       def even?
         self % 2 == 0
