@@ -1,4 +1,4 @@
-# Programming Skills
+# Foundational Programming Skills
 
 This presentation covers the basic skills required to be a programmer...
 
@@ -69,6 +69,17 @@ This presentation covers the basic skills required to be a programmer...
 * The OS is a program that runs other programs
   * the term "multitasking" actually started with computers and migrated to common usage
 * It also helps programs communicate with hardware (video, memory, disk, network...)
+
+# Package Managers
+* For installing and updating low-level programs
+* Like Apple's "Software Update" for the command line
+  * or iTunes App Store
+* Examples
+  * *Mac OS*: MacPorts, Homebrew
+  * *Linux*: apt-get, rpm
+  * *Ruby*: gem, bundler
+  * *Perl*: CPAN
+  * *JavaScript*: npm
 
 # Version Control
 * Definition
