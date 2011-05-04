@@ -1,14 +1,17 @@
+<!SLIDE subsection>
 # Foundational Programming Skills
 
 This presentation covers the basic skills required to be a programmer...
 
  ...that **don't** involve actually writing code.
 
+<!SLIDE bullets>
 # Files and Directories
 
 * The House/Rooms/Drawers Metaphor
   * directories store files and keep everything in your ‘house’ organized
 
+<!SLIDE bullets>
 # The Command Line
 
     ls
@@ -21,6 +24,7 @@ This presentation covers the basic skills required to be a programmer...
     cp
     rm
 
+<!SLIDE bullets>
 # Special Directories
 
 * Current directory 
@@ -30,11 +34,13 @@ This presentation covers the basic skills required to be a programmer...
 * Home directory
   * `~` ("tilde")
 
+<!SLIDE bullets>
 # More about directories
 
 * Explain where home and root are located in relation to all directories.
 * Explain difference between absolute paths (starting with a /) and relative paths.
 
+<!SLIDE bullets>
 # Text Editing
 
 * text editor vs. word processor
@@ -47,6 +53,7 @@ This presentation covers the basic skills required to be a programmer...
   * Emphasize the importance of saving the buffer to a file before trying to run it with ruby.
   * "Save" makes things unsafe
 
+<!SLIDE bullets>
 # Compilers, Interpreters and Programming Languages
 
 * Use metaphor of programming language as an agreed set of rules about syntax for writing source code that is sent to the interpreter and translated into byte code.
@@ -55,11 +62,13 @@ This presentation covers the basic skills required to be a programmer...
 * Explain differences between compiled vs. dynamic languages.
 * Tie everything together by explaining that source code are instructions that are translated into language that machines understand and can execute.
 
+<!SLIDE bullets>
 # Memory, CPU, Hard Disk
 
 * Very briefly explain how a computer works and all the moving parts (literally) starting with hard drive, memory, and CPU.
 * Give the group basic understanding of where the source code is stored and how and where it is executed.
 
+<!SLIDE bullets>
 # Operating System
 
 ![](img/os_x_logo.jpg)
@@ -70,6 +79,7 @@ This presentation covers the basic skills required to be a programmer...
   * the term "multitasking" actually started with computers and migrated to common usage
 * It also helps programs communicate with hardware (video, memory, disk, network...)
 
+<!SLIDE bullets>
 # Package Managers
 * For installing and updating low-level programs
 * Like Apple's "Software Update" for the command line
@@ -81,6 +91,7 @@ This presentation covers the basic skills required to be a programmer...
   * *Perl*: CPAN
   * *JavaScript*: npm
 
+<!SLIDE bullets>
 # Version Control
 * Definition
 * Terminology
@@ -89,6 +100,7 @@ This presentation covers the basic skills required to be a programmer...
   * "diff"
   * "merge"
   
+<!SLIDE bullets>
 # Version Control with git
 * More Terminology
   * "add"

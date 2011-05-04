@@ -30,7 +30,7 @@
 ### Ruby 1.0 released in 1996
 ### open source 
 
-!SLIDE centereverything
+!SLIDE bullets
 
 ## Ruby Language Overview
 * Dynamically typed
@@ -50,6 +50,7 @@ IRB: Interactive RuBy
 
 !SLIDE
 
+    @@@ ruby
     >> 4
     >> 4 + 4
 
@@ -59,6 +60,7 @@ Everything is an object
 
 !SLIDE
 
+    @@@ ruby
     “test”.upcase
     “test”.class
     “test”.methods
@@ -69,6 +71,7 @@ Everything evaluates to something
 
 !SLIDE
 
+    @@@ ruby
     2 + 2
     (2+2).zero?
 
@@ -78,6 +81,7 @@ Methods are messages
 
 !SLIDE
 
+    @@@ ruby
     thing.do(4)
     thing.do 4
     thing.send "do", 4
@@ -88,12 +92,14 @@ Operators are Methods
 
 !SLIDE
 
+    @@@ ruby
     1 + 2
     1.+(2)
     1.send "+", 2
 
 !SLIDE
 
+    @@@ ruby
     # is a comment
 
 !SLIDE
