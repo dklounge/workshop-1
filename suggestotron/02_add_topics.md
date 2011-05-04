@@ -40,7 +40,7 @@
   * route  map.resources :topics
 
 !SLIDE
-![Architecture](../img/request-response.png)
+![Architecture](img/request-response.png)
 
 !SLIDE
 # Model-View-Controller

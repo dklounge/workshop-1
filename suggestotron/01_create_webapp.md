@@ -5,7 +5,7 @@
 * Register and login
 
 !SLIDE
-<img src="../img/authenticated_home.jpg"/>
+<img src="img/authenticated_home.jpg"/>
 
 !SLIDE
 # Let's build a web app
@@ -116,4 +116,4 @@
 
 !SLIDE
 
-<img src="../img/git.png"/>
+<img src="img/git.png"/>

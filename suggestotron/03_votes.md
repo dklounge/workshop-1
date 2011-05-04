@@ -13,6 +13,6 @@
 * Vote belongs_to :topics
 
 !SLIDE
-![has_many](../img/has-many.png)
+![has_many](img/has-many.png)
 
 
