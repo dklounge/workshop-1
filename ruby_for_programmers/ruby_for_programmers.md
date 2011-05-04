@@ -1,4 +1,4 @@
-!SLIDE
+!SLIDE subsection
 # Introduction to Ruby for Programmers
 
 <img src="img/ruby-logo.jpg" width="250">
@@ -11,19 +11,17 @@
 ### Rails is a Framework
 <img src="img/rails_logo.jpg" height="250" width="250">
 
-!SLIDE 
-
-## Matz (Yukihiro Matsumoto)
-
 !SLIDE
 
-####People want to express themselves when they program. 
-####&nbsp;
-####They don't want to fight with the language. 
-####&nbsp;
-####Programming languages must feel natural to programmers. 
-####&nbsp;
-####I tried to make people enjoy programming and concentrate on the fun and creative part of programming when they use Ruby.
+"People want to express themselves when they program."
+
+"They don't want to fight with the language."
+
+"Programming languages must feel natural to programmers."
+
+"I tried to make people enjoy programming and concentrate on the fun and creative part of programming when they use Ruby."
+
+&nbsp;- Matz (Yukihiro Matsumoto)
 
 !SLIDE 
 
@@ -46,7 +44,7 @@ Let's get started
 
 !SLIDE
 
-IRB: Interactive RuBy
+# IRB: Interactive RuBy
 
 !SLIDE
 
@@ -56,7 +54,7 @@ IRB: Interactive RuBy
 
 !SLIDE
 
-Everything is an object
+# Everything is an object
 
 !SLIDE
 
@@ -67,7 +65,7 @@ Everything is an object
 
 !SLIDE
 
-Everything evaluates to something
+# Everything evaluates to something
 
 !SLIDE
 
@@ -77,7 +75,7 @@ Everything evaluates to something
 
 !SLIDE
 
-Methods are messages
+# Methods are messages
 
 !SLIDE
 
@@ -88,7 +86,7 @@ Methods are messages
 
 !SLIDE
 
-Operators are Methods
+# Operators are Methods
 
 !SLIDE
 
@@ -104,16 +102,17 @@ Operators are Methods
 
 !SLIDE
 
-#### Ruby aims to be elegant and readable
-#### so punctuation and boilerplate are minimal
+Ruby aims to be elegant and readable
+
+so punctuation and boilerplate are minimal
 
 !SLIDE
 
-You don't need semicolons
+# You don't need semicolons
  
 !SLIDE
 
-Use parens when you need them
+# Use parens when you need them
    
 !SLIDE
 
@@ -200,7 +199,7 @@ It gets evaluated and stuck inside the string
 
 !SLIDE
 
-Iteration
+# Iteration
 
 !SLIDE
 
