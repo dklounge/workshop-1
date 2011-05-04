@@ -13,7 +13,7 @@ Alex has been improving showoff; until his latest patches get accepted and relea
     cd showoff
     bundle install
     rake gem:install
-   
+
 # Installing these slides
 
 Alex has been working on these slides on a fork, so until they are accepted into the Railsbridge github repo, do this:
@@ -32,23 +32,27 @@ This will launch a local Sinatra server on port 9090. Open your browser to `loca
 
 Use arrow keys to navigate slides. Press '?' to see a help window.
 
+(You can also `cd` into the directory and then run `showoff serve` if you like.)
+
 # Running several presentations in a row
 
-This should be doable but for now it's not easy. (It depends on showoff allowing more than one `showoff.json` file in a single directory.)
+You can create a custom presentation out of any combination and ordering of the section directories by creating your own `showoff.json` file. See `nyc.json` for an example -- it's the same as the standard `showoff.json` but inserts NY-specific resources after the Welcome section.
 
 # Editing slides
 
 Slides are in [Markdown](http://daringfireball.net/projects/markdown/syntax) format. Showoff will read all `.md` files in alphabetical order.
 
-You can also add custom `.css` and `.js` files, which will get imported into all slide sets.
+You can also add custom `.css` and `.js` files, which will get imported into all slide sections.
 
-Images should be in the current directory. If you want you can make a symlink to `../img` but that might not work on all OSs (i.e. Windows).
+Images should be in, or relative to, the current directory. If you want you can make a symlink to `../img` but that might not work on all OSs (i.e. Windows).
 
 # Printing slides
 
 Not well supported. Try
 
     showoff static
+
+but be prepared to be disappointed. Same with PDFs.
 
 # Support
 
