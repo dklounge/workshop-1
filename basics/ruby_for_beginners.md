@@ -71,11 +71,26 @@
 !SLIDE
 ## Types of information
 
-### text, numbers...collections?
+!SLIDE
+## Strings (text)
+
+!SLIDE
+## Numbers
+
+!SLIDE
+# Collections
+
+!SLIDE
+# Arrays
 
     >> fruits = ["kiwi", "strawberry", "plum"]
     => ["kiwi", "strawberry", "plum"]
-    >> states = {"CA" => "California", "DE" => "Delaware"}
+    
+!SLIDE 
+# Hashes
+
+    >> states = {"CA" => "California", 
+        "DE" => "Delaware"}
     => {"CA"=>"California", "DE"=>"Delaware"}
 
 !SLIDE
@@ -123,7 +138,7 @@ The easy way:
     => ["kiwi", "strawberry", "plum"]
 
 !SLIDE
-# Loops
+# Loops (multi-line)
 
 The easy way, with "do...end" rather than "{...}"
 
@@ -146,10 +161,46 @@ The easy way, with "do...end" rather than "{...}"
     plum
     => ["kiwi", "strawberry", "plum"]
 
+!SLIDE subsection
+# Command-Line Programs
+
+!SLIDE bullets
+# Hello World
+
+hello.rb
+    @@@ Ruby
+    puts "Hello, World!"
+
+!SLIDE bullets
+# Arguments (ARGV)
+
+hello.rb
+    @@@ Ruby
+    puts "Hello, #{ARGV.first}!"
+
+    $ ruby hello.rb Alice
+    Hello, Alice!
+
+!SLIDE bullets
+# Conditionals
+
+hello.rb
+    @@@ Ruby
+    if ARGV.empty?
+      puts "Hello, World!"
+    else
+      puts "Hello, #{ARGV.first}!"
+    end
+
+    $ ruby hello.rb
+    Hello, World!
+    $ ruby hello.rb Alice
+    Hello, Alice!
+
 !SLIDE
 # Sinatra 
 
-## hello.rb
+## hello_app.rb
 
     @@@ Ruby
     require 'rubygems'
@@ -163,7 +214,7 @@ The easy way, with "do...end" rather than "{...}"
 # Sinatra
 
     $ gem install sinatra
-    $ ruby hello.rb
+    $ ruby hello_app.rb
     == Sinatra/1.2.6 has taken the stage on 4567 for development with backup from Thin
     >> Thin web server (v1.2.7 codename No Hup)
     >> Maximum connections set to 1024
@@ -171,13 +222,15 @@ The easy way, with "do...end" rather than "{...}"
 
 then open a browser to <http://localhost:4567/>
 
+!SLIDE bullets
+# sinatra with rerun
+
+    gem install rerun
+    rerun hello_app.rb
+    
+...now it'll automatically reload when you edit a file.
+
 !SLIDE
-
-## Now we've done some Ruby...
-## ...let's do some Rails!
-
-!SLIDE
-
 ## Web App Network Architecture
 ![](img/web-application.png)
 

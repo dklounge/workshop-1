@@ -56,7 +56,7 @@ This presentation covers the basic skills required to be a programmer...
 <!SLIDE bullets>
 # Compilers, Interpreters and Programming Languages
 
-* Use metaphor of programming language as an agreed set of rules about syntax for writing source code that is sent to the interpreter and translated into byte code.
+* Programming language as an agreed set of rules about syntax for writing source code that is sent to the interpreter and translated into byte code.
 * Explain that byte code is the binary that machines understand and use for executing instructions.
 * Use metaphor that CPU is like a guy in a factory executing commands that it is handled, and the source code are those instructions.
 * Explain differences between compiled vs. dynamic languages.
