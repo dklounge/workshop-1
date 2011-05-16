@@ -137,6 +137,12 @@ hashtag #mountainrb
 ### By the end of the day, you will have built and deployed a web application - live on the internet!
 
 <!SLIDE bullets>
+# Don't be shy!
+
+* Ask questions!
+* TAs and teachers are here to 
+
+<!SLIDE bullets>
 ## Tools we'll be working with
 * **rails**
 * **rake**: like make for Ruby. An easy way to run tasks.

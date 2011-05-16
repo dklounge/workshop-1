@@ -83,15 +83,44 @@
 !SLIDE
 # Arrays
 
+An Array is a list of objects.
+
     >> fruits = ["kiwi", "strawberry", "plum"]
     => ["kiwi", "strawberry", "plum"]
-    
+
+!SLIDE
+# Array Indexing
+
+Ruby starts counting at zero.
+
+    >> fruits[0]
+    => "kiwi"
+    >> fruits[2]
+    => "plum"
+    >> fruits[3]
+    => nil
+
+!SLIDE
+# Array methods
+
+* first, last
+* push, pop
+* shift, unshift
+
+        fruits.first #=> "kiwi"
+        
 !SLIDE 
 # Hashes
 
-    >> states = {"CA" => "California", 
-        "DE" => "Delaware"}
-    => {"CA"=>"California", "DE"=>"Delaware"}
+* aka Dictionary or Map
+* collection of key/value pairs
+
+        >> states = {"CA" => "California", 
+            "DE" => "Delaware"}
+        => {"CA"=>"California", "DE"=>"Delaware"}
+
+        >> states["CA"]
+        => "California"
 
 !SLIDE
 ## Operators

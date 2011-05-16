@@ -11,7 +11,7 @@ Alex has been improving showoff; until his latest patches get accepted and relea
 
     git clone git://github.com/alexch/showoff.git
     cd showoff
-    bundle install
+    bundle install --without optional
     rake gem:install
 
 # Installing these slides
@@ -58,3 +58,26 @@ but be prepared to be disappointed. Same with PDFs.
 
 Email <mailto:railsbridge-workshops@googlegroups.com>
 
+# LICENSE
+
+This project is under an open source license. We're not sure exactly which one... probably MIT.
+
+Gill Sans is under copyright. It's a great slide font and it comes with all recent Macs (and Gill Sans MT comes with MS Office). But it might not be on the instructor's machine so I checked in a zip file. This was probably the wrong thing to do.
+
+Here is Gill Sans licensing info
+  http://www.fontslive.com/font/gill-sans-family.aspx
+  http://www.ascendercorp.com/font/gill-sans/
+
+"The Gill Sans stack should work on most all computers. Gill Sans comes on all
+Macs and Gill Sans MT is installed with Microsoft Office, and Calibri (which
+is a good stand-in for Gill Sans) is one the core Vista fonts and is installed
+with both Office Windows and Office Mac. And lastly, if all else fails, use
+Trebuchet" - http://www.artsiteframework.com/guide/fontstacks.php -- the stack
+he's talking about is
+
+  "Gill Sans", "Gill Sans MT", GillSans, Calibri, "Trebuchet MS", sans-serif
+
+Perhaps we should replace it with a free font like SansBetween
+  http://manfred-klein.ina-mar.com/
+  http://manfred-klein.ina-mar.com/fonts/2008-02/SansBetween-MAC.zip
+  http://manfred-klein.ina-mar.com/fonts/2008-02/SansBetween-PC.zip
