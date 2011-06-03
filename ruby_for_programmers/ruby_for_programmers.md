@@ -1,5 +1,6 @@
 !SLIDE subsection
 # Introduction to Ruby for Programmers
+<script src="file/shrink.js" />
 
 <img src="img/ruby-logo.jpg" width="250">
 
@@ -400,7 +401,12 @@ We don't care what an object is as long as it does what we want
 
 # Modules and Mixins
 
-Ruby has a mixin-based inheritance system that is somewhat like multiple inheritance with one primary ancestor class.
+* Ruby has a mixin-based inheritance system that is somewhat like multiple inheritance.
+* Any class (or object) can *include* a Module
+  * also known as *mixing in*
+  * so Modules are also called Mixins
+* Modules provide *behavior* but no *state*
+  * more precisely, they affect the extending object's state
 
 !SLIDE
 

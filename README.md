@@ -42,17 +42,17 @@ You can create a custom presentation out of any combination and ordering of the 
 
 Slides are in [Markdown](http://daringfireball.net/projects/markdown/syntax) format. Showoff will read all `.md` files in alphabetical order.
 
-You can also add custom `.css` and `.js` files, which will get imported into all slide sections.
+You can also add custom `.css`, `.scss`, and `.js` files, which will get imported into all slide sections.
 
-Images should be in, or relative to, the current directory. If you want you can make a symlink to `../img` but that might not work on all OSs (i.e. Windows).
+Images should be in, or relative to, the current directory.
 
 # Printing slides
 
-Not well supported. Try
+Try this: first `gem install pdfkit`, then visit
 
-    showoff static
+    http://localhost:9090/pdf
 
-but be prepared to be disappointed. Same with PDFs.
+but I make no guarantees!
 
 # Support
 
@@ -62,20 +62,21 @@ Email <mailto:railsbridge-workshops@googlegroups.com>
 
 This project is under an open source license. We're not sure exactly which one... probably MIT.
 
-Gill Sans is under copyright. It's a great slide font and it comes with all recent Macs (and Gill Sans MT comes with MS Office). But it might not be on the instructor's machine so I checked in a zip file. This was probably the wrong thing to do.
+Gill Sans is under copyright. It's a great slide font and it comes with all recent Macs (and Gill Sans MT comes with MS Office).
+But it might not be on the instructor's machine so I checked in a zip file. This was probably the wrong thing to do.
 
 Here is Gill Sans licensing info
-  http://www.fontslive.com/font/gill-sans-family.aspx
-  http://www.ascendercorp.com/font/gill-sans/
+  <http://www.fontslive.com/font/gill-sans-family.aspx>
+  <http://www.ascendercorp.com/font/gill-sans/>
 
 "The Gill Sans stack should work on most all computers. Gill Sans comes on all
 Macs and Gill Sans MT is installed with Microsoft Office, and Calibri (which
 is a good stand-in for Gill Sans) is one the core Vista fonts and is installed
 with both Office Windows and Office Mac. And lastly, if all else fails, use
-Trebuchet" - http://www.artsiteframework.com/guide/fontstacks.php -- the stack
+Trebuchet" - <http://www.artsiteframework.com/guide/fontstacks.php> -- the stack
 he's talking about is
 
-  "Gill Sans", "Gill Sans MT", GillSans, Calibri, "Trebuchet MS", sans-serif
+    "Gill Sans", "Gill Sans MT", GillSans, Calibri, "Trebuchet MS", sans-serif
 
 Perhaps we should replace it with a free font like SansBetween
   http://manfred-klein.ina-mar.com/
