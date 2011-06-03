@@ -106,6 +106,17 @@
 * Pair up for 1 minute, then introduce your partner
 * Remember the point is to get them confident at speaking out loud
 
+<!SLIDE>
+# HOWTO Encourage Women in Linux
+<http://tldp.org/HOWTO/Encourage-Women-Linux-HOWTO/>
+
+* Women have fewer opportunities for friendship or mentoring
+* Don't take the keyboard away
+* Do give directions and explain them clearly
+* Don't make sexual advances towards women
+* Don't criticize too much
+* Do compliment
+
 <!SLIDE bullets incremental>
 # How to introduce yourself to the class?
 As a teacher or TA... 
