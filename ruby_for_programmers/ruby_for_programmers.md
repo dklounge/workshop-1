@@ -1,34 +1,57 @@
 !SLIDE subsection
 # Introduction to Ruby for Programmers
-<script src="file/shrink.js" />
 
-<img src="img/ruby-logo.jpg" width="250">
+<img src="ruby-logo.jpg" width="250">
+
+This section is intended as a brief, lightweight overview of the Ruby language; following sections will cover all these topics in much more detail. Students are encouraged to ask questions, but instructors are encouraged to answer, "We'll cover that later."
+
+(Originally based upon [Ruby Quickstart for Refugees](https://gist.github.com/190567) but improved by many.)
 
 !SLIDE
+
+# Ruby vs. Rails
 
 ## Ruby is a Language
-<img src="img/ruby-logo.jpg" height="125" width="125">
+<img src="ruby-logo.jpg" height="125" width="125">
 
 ## Rails is a Framework
-<img src="img/rails_logo.jpg" height="125" width="125">
+<img src="rails_logo.jpg" height="125" width="125">
 
-<!SLIDE incremental>
+## Rails is written in Ruby
 
-"People want to express themselves when they program."
+<!SLIDE subsection incremental>
+# Ruby Philosophy
 
-"They don't want to fight with the language."
+Q: Did you have a guiding philosophy when designing Ruby?
 
-"Programming languages must feel natural to programmers."
+A: Yes, it's called the "principle of least surprise."
 
-"I tried to make people enjoy programming and concentrate on the fun and creative part of programming when they use Ruby."
+I believe people want to express themselves when they program.
 
-&nbsp;- Matz (Yukihiro Matsumoto)
+They don't want to fight with the language.
 
-!SLIDE
+Programming languages must feel natural to programmers.
 
-## Ruby 1.0 released in 1996
-## Open Source
-## Many implementations
+I tried to make people enjoy programming and concentrate on the fun and creative part of programming when they use Ruby.
+
+&nbsp;&nbsp;- [Matz](http://linuxdevcenter.com/pub/a/linux/2001/11/29/ruby.html) (Yukihiro Matsumoto), Ruby creator
+
+!SLIDE incremental
+# Ruby Philosophy, Applied
+
+* Ruby has a *humane interface*
+  * many ways to do things
+* Ruby favors readability and variety over concision and perfection
+* sometimes makes code hard to understand (but usually makes it easier)
+* contrast to *minimal interface*
+  * one (or a few) "right" ways to do things
+  * Python has a minimal philosophy
+
+# Many Rubies
+
+* Ruby 1.0 released in 1996
+  * Fully Open Source
+* Many implementations
   * MRI
     * REE
     * Kiji
@@ -38,9 +61,14 @@
   * MacRuby
   * IronRuby
 
-!SLIDE smbullets
+# Versions common today
 
-## Ruby Language Overview
+* MRI 1.8.7
+* MRI 1.9.2
+* JRuby
+
+# Ruby Language Overview
+
 * Dynamically typed
 * Interpreted
 * Can be modified at runtime
@@ -49,11 +77,7 @@
 * Perl-like regular expressions
 * Closely tied to shell & OS
 
-!SLIDE
-
 # IRB: Interactive RuBy
-
-!SLIDE
 
     @@@ ruby
     $ irb
@@ -62,68 +86,29 @@
     >> 4+4
     => 8
 
-!SLIDE
-
-# Everything is an object
-
-!SLIDE
-
-    @@@ ruby
-    "test".upcase
-    "test".class
-    "test".methods
-    2.methods
-    1.to_s    #=> "1"
-    "1".to_i  #=> 1
-
-!SLIDE
+Please fire up `irb` on your computer and try this out!
 
 # Everything evaluates to something
-
-!SLIDE
 
     @@@ ruby
     >> 2 + 2
     => 4
+
     >> (2+2).zero?
     => false
 
-!SLIDE
+    >> "foo" if false
+    => nil
 
-# Methods are messages
+    >> puts "foo"
+    foo
+    => nil
 
-!SLIDE
-
-    @@@ ruby
-    thing.do(4)
-    thing.do 4
-    thing.send "do", 4
-
-!SLIDE
-
-# Operators are Methods
-
-!SLIDE
-
-    @@@ ruby
-    1 + 2
-    1.+(2)
-    1.send "+", 2
-
-!SLIDE
 # Hash mark comments, like perl
 
     @@@ ruby
     # is a comment
     2 + 2 # is a comment
-
-!SLIDE
-
-Ruby aims to be elegant and readable
-
-so punctuation and boilerplate are minimal
-
-!SLIDE
 
 # Optional semicolons, parens, and `return`
 
@@ -140,11 +125,23 @@ These are equivalent:
 
     def inc(x); x + 1; end
 
-!SLIDE
+# Line Break Gotcha
+
+    @@@ ruby
+    x = 1 + 2
+    x #=> 3
+
+    x = 1
+      + 2
+    x #=> 1
+
+Solution: always put operators on top line
+
+    x = 1 +
+        2
+    x #=> 3
 
 # Use parens when you need them
-
-!SLIDE
 
     @@@ ruby
     >> "Hello".gsub 'H', 'h'
@@ -153,10 +150,8 @@ These are equivalent:
     >> "Hello".gsub("H", "h").reverse
     => "olleh"
 
-!SLIDE  bullets
-# Variables
-
-variables are implicitly declared
+!SLIDE
+# Variables are declared implicitly
 
     @@@ ruby
     first_name = "Santa"
@@ -164,306 +159,131 @@ variables are implicitly declared
     full_name = first_name + last_name
     #=> "SantaClaus"
 
-!SLIDE bullets
-
-# Built-in Types
-
-* Symbols
-* Arrays
-* Hashes
-* Strings
-
-!SLIDE
-
-# Symbols
-## :a_symbol
-
-There is only one representation of a given symbol in memory, so it really
-means "the thing named :a_symbol" to the ruby interpreter.
-
-In Ruby, we prefer symbols over hardcoded globals or strings. They're very lightweight.
-
-!SLIDE
-# Array
-
-* sized dynamically
-* can contain mixed types
-* zero-indexed
-* can be defined *literally* (inline) e.g.
-
-      @@@ ruby
-      fruits = ["apple", "banana"]
-
-!SLIDE
-
-    @@@ ruby
-    a = [1, 2, 3]
-    a.push "four" #=> [1, 2, 3, "four"]
-    a.pop #=> "four"
-    a[0] #=> 1
-
-!SLIDE incremental
-
-# Hash
-
-* also known as...
-  * Map
-  * Associative Array
-  * Dictionary
-  * Name/Value Pair Store
-  * Key/Value Pair Store
-* can be defined *literally* (inline) e.g.
-
-        @@@ ruby
-        letter_fruits => {"A" => "apple",
-        "B" => "banana"}
-
-
-!SLIDE
-
-    @@@ ruby
-    states = {"MA" => "Massachusetts",
-              "CA" => "California"}
-
-    states["MA"] #=> "Massachusetts"
-
-!SLIDE
-
-    @@@ ruby
-    my_hash = {:a_symbol => 3, "a string" => 4}
-    my_hash[:a_symbol] #=> 3
-
-!SLIDE
-# String
-
-[todo]
-
-!SLIDE
-
 # String interpolation
 
     @@@ ruby
     "boyz #{1 + 1} men"
     => "boyz 2 men"
 
-Any Ruby code can go inside the braces
+* Any Ruby code can go inside the braces
+* It gets evaluated and stuck inside the string
 
-It gets evaluated and stuck inside the string
+!SLIDE custom
+# Built-in Types
 
-!SLIDE
+* Numbers
+  * `42`
+* Booleans
+  * `true`
+  * `false`
+* Strings
+  * `"apple"`
+  * `'banana'`
+* Symbols
+  * `:apple`
+* Arrays
+  * `["apple", "banana"]`
+* Hashes
+  * `{:apple => 'red', :banana => 'yellow'}`
+* Ranges
+  * `(1..10)`
+
+# Functions
 
     @@@ ruby
-    >> a = "world"
-    >> puts "hello #{a}"
-    hello world
-
-    >> a = 2
-    >> puts "hello #{a}"
-    hello 2
-
-    >> a = nil
-    >> puts "hello #{a} there"
-    hello  there
-
-
-!SLIDE subsection
-
-# Iterators
-
-!SLIDE
-
-    @@@ ruby
-    my_array = ["cat", "dog", ”world"]
-    my_array.each do |item|
-      puts "hello " + item
+    def add(a,b)
+      a + b
     end
 
-!SLIDE
+    add(2, 2)
+    #=> 4
 
-    @@@ ruby
-    my_hash = { :type => "cat",
-                :name => "Beckett",
-                :breed => "alley cat" }
-    my_hash.each do |key, value|
-      puts "My " + key.to_s + " is " + value
-    end
-
-
-!SLIDE subsection
+* Note: no 'return' required
 
 # Classes and methods
 
-!SLIDE
-
     @@@ ruby
-    class Thing
-      def return_something
-        "something"
-      end
-    end
-
-!SLIDE
-
-    @@@ ruby
-    class Thing
-      def do_something(a,b)
+    class Calculator
+      def add(a,b)
         a + b
       end
     end
 
+* a *function* inside a *class* is called a *method*
 
-!SLIDE
-# Scoping
+# bang and question methods
+
+* method names can end with `!` or `?`
+  * `!` means "watch out!"
+  * `?` means "boolean"
+
+# equal, double-equal, and threequal
+
+* `x = 1` means "put the value `1` in the variable `x`"
+* `x == 2` means "`true` if `x` is `2`, otherwise `false`"
+* `x === 3` means the same as `==` but sometimes more
+
+# Ruby syntax cheatsheet
+
+![cheatsheet](cheatsheet/cheatsheet.png)
+
+(_The Well-Grounded Rubyist_, p. 5, section 1.1.2)
+
+# Ruby identifiers
+
+* `local_variable` - start with letter or underscore, contain letters, numbers, underscored
+* `@instance_variable` - start with `@`
+* `@@class_variable` - start with `@@`
+* `$global_variable` - start with `$`
+* `Constant` - start with uppercase letter
+* `method_name?` - same as local, but can end with `?` or `!` or `=`
+* keywords - about 40 reserved words (`def`) and weirdos (`__FILE__`)
+* literals - `"hi"` for strings, `[1,2]` for arrays, `{:a=>1, :b=2}` for hashes
+
+# Ruby Naming Conventions
+
+methods and variables are in `snake_case`
+
+classes and modules are in `CamelCase`
+
+constants are in `ALL_CAPS`
+
+> Standard is better than better.
+>
+> -- Anon.
+
+# Variable Scopes
 
     @@@ ruby
-    var
-    @var
-    @@var
-    $var
-    VAR
-
-!SLIDE
-# Scoping
-
-    @@@ ruby
-    var   # could be a local variable
+    var   # local variable (or method call)
     @var  # instance variable
     @@var # class variable
     $var  # global variable
     VAR   # constant
 
-!SLIDE incremental
-# The Default Block
+# Messages and Methods
 
-* Methods can take block arguments
-* Use either `do...end` or `{...}` at the very end of the argument list
-* Inside the method, call the default block with `yield`
+* an object is referenced by a variable or a literal
+* the dot operator (`.`) sends a message to an object
+* an object receives a *message* and invokes a *method*
+* with no dot, the default object (`self`) is the receiver
 
-!SLIDE
+# Classes
 
-    @@@ ruby
-    my_array = ["cat", "dog", ”world"]
-    my_array.each do |item|
-      puts "hello " + item
-    end
+* A class defines a group of behaviors (methods)
+* Every object has a class, `Object` if nothing else
 
-!SLIDE
+# `load` and `require`
 
-    @@@ ruby
-    def twice
-       yield
-       yield
-    end
+* `load` inserts a file's contents into the current file
+* `require` makes a *feature* available to the current file
+  * skips already-loaded files
+  * omits the trailing `.rb`
+  * can also be used for extensions written in C (`.so`, `.dll`, etc.)
 
-    twice do
-      puts "hi"
-    end
-
-!SLIDE incremental
-
-# Blocks can also take parameters or return a value
-# The `map` iterator translates each item in an array
-
-!SLIDE
-
-    @@@ ruby
-    >> ["hello", "world"].map{ |string| string.upcase }
-    => ["HELLO", "WORLD"]
-
-!SLIDE subsection
-
-# more neat things about ruby
-
-!SLIDE
-
-## duck typing
-
-If it looks like a duck, and quacks like a duck...
-
-We don't care what an object is as long as it does what we want
-
-!SLIDE
-
-    @@@ ruby
-    def print_even_or_odd(array_like_thing)
-      array_like_thing.each do |item|
-        puts "#{item} is #{item.even? ? "even" : "odd"}."
-      end
-    end
-
-!SLIDE
-
-    @@@ ruby
-    print_even_or_odd [1, 2, 3]
-    print_even_or_odd 1..3
-
-!SLIDE
-
-# Modules and Mixins
-
-* Ruby has a mixin-based inheritance system that is somewhat like multiple inheritance.
-* Any class (or object) can *include* a Module
-  * also known as *mixing in*
-  * so Modules are also called Mixins
-* Modules provide *behavior* but no *state*
-  * more precisely, they affect the extending object's state
-
-!SLIDE
-
-# advanced ruby
-
-* meta-programming
-* creating Domain-Specific Languages (DSLs)
-
-!SLIDE
-
-#Rails
-#Rake
-#Cucumber
-#Rspec
-#etc
-
-!SLIDE
-
-the `method_missing` method
-
-!SLIDE
-
-#### private vs public
-
-!SLIDE
-
-* Private really just means "please don't come in."
-* If someone has access to your runtime environment, they are trusted.
-* Spend your time writing code (and testing it), not protecting yourself from other code
-
-!SLIDE
-# Reopening classes
-
-    @@@ ruby
-    class Fixnum
-      def even?
-        self % 2 == 0
-      end
-    end
-
-    1.even? #=> false
-
-!SLIDE
-
-everything is an object
-
-!SLIDE
-
-# Classes are objects
-
-* class methods are really just methods on the class object
-* code evaluated in the scope of a class definition acts on the class object
-
-!SLIDE
 # Credits
 
-* Based upon [Ruby Quickstart for Refugees](https://gist.github.com/190567)
-* Improved by Sarah Allen, Alex Chaffee, and others
+* "Ruby Intro" slides based on [Ruby Quickstart for Refugees](https://gist.github.com/190567) by [Jacob Rothstein](http://about.me/jbr)
+* Improved by Alex Chaffee, Sarah Allen, Wolfram Arnold
 
 
