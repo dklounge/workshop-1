@@ -1,9 +1,11 @@
 <!SLIDE image>
 # sponsors
 <center>
+<img src="../img/sqaure_logo.jpg" /><br />
 <img src="../img/pivotal_labs_logo.png" width="200" />&nbsp;&nbsp;
 <img src="../img/mountainrb.jpg" width="300"/>&nbsp;&nbsp;
 <img src="../img/blazing_cloud_logo.png" width="200"/>&nbsp;&nbsp;
+<img src="../img/mozilla_logo.jpg" width="200"/>&nbsp;&nbsp;
 </center>
 
 <!SLIDE bullets>
