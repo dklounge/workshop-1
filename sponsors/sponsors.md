@@ -1,5 +1,4 @@
 <!SLIDE image>
-# sponsors
 <center>
 <img src="../img/square_logo.png" height="100" /><br />
 <img src="../img/pivotal_labs_logo.png" width="200" />&nbsp;&nbsp;
